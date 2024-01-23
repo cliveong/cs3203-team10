@@ -1,0 +1,19 @@
+procedure first {
+	x = 1;
+	print x;
+	read y;
+	y = m;
+	call second;
+	f = 3 + 4;
+}
+
+procedure second {
+	print y;
+	x = 3 + l;
+	read smth;
+	print random;
+	print fin;
+	f = p - 3 + l;
+	g = l % 10;
+	read egg;
+}

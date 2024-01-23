@@ -1,0 +1,55 @@
+1 - pattern basic 2 strings
+assign a;
+Select a pattern a("x", _"x"_)
+7
+5000
+2 - pattern arg1 wildcard arg2 string
+assign a;
+Select a pattern a(_, _"2"_)
+8
+5000
+3 - pattern arg1 string arg2 wildcard
+assign a;
+Select a pattern a("y", _)
+19,20,8
+5000
+4 - pattern both wildcard
+assign a;
+Select a pattern a(_,_)
+14,15,17,18,19,20,7,8,9
+5000
+5 - pattern arg1 synonym arg2 string
+assign a; variable v;
+Select v pattern a(v, _"2"_)
+y
+5000
+6 - pattern arg1 synonym arg2 wildcard
+assign a; variable v;
+Select v pattern a(v, _)
+x,y,z
+5000
+7 - pattern arg1 synonym arg2 string
+assign a; variable v;
+Select a pattern a("y", _"k"_)
+none
+5000
+8 - partial match not in tree
+assign a; variable v;
+Select a pattern a(v, _"x-y"_)
+none
+5000
+9 - partial match brackets
+assign a; variable v;
+Select a pattern a(v, _"(x*y)+(z/x)"_)
+9
+5000
+10 - exact match
+assign a; variable v;
+Select a pattern a(v, "y+2")
+8
+5000
+11 - exact match brackets
+assign a; variable v;
+Select a pattern a(v, "(abc + 123)")
+14, 17, 19
+5000

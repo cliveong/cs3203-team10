@@ -1,0 +1,220 @@
+1 - Uses (stmt, var)
+stmt s, s1; variable v;
+Select s1 such that Uses (s, v)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+2 - Uses (stmt, var)
+stmt s; variable v;
+Select s such that Uses (s, v)
+2,3,4,5,6,8,9,10,11,12,15,18,19,21,22,23,24,25,26,28,29,
+5000
+3 - Uses (read, var)
+read r; variable v;
+Select r such that Uses (r, v)
+none
+5000
+4 - Uses (print, var)
+print p; variable v;
+Select p such that Uses (p, v)
+10,11,19,28,
+5000
+5 - Uses (while, var)
+while w; variable v;
+Select w such that Uses (w, v)
+9,15,21,24,
+5000
+6 - Uses (if, var)
+if i; variable v;
+Select i such that Uses (i, v)
+3,4,18,26,
+5000
+7 - Uses (assign, var)
+assign a; variable v;
+Select a such that Uses (a, v)
+2,5,6,8,12,22,23,25,29,
+5000
+8 - Uses (proc, var)
+procedure p; variable v;
+Select p such that Uses (p, v)
+Skywalker,
+5000
+9 - Uses (while, var)
+while w; variable v;
+Select v such that Uses (w, v)
+procedure,x,y,Skywalker,while,Palpatine,
+5000
+10 - Uses (if, var)
+if i; variable v;
+Select v such that Uses (i, v)
+procedure,x,y,z,t,Skywalker,Solo,Vader,while,Yoda,Kenobi,xx,yy,zz,tt,dd,k,m,n,then,else,if,Palpatine,
+5000
+11 - Uses (stmt, ident)
+stmt s;
+Select s such that Uses (s, "Vader")
+3,4,12,
+5000
+12 - Uses (proc, ident)
+procedure p;
+Select p such that Uses (p, "x")
+Skywalker,
+5000
+13 - Uses (stmt, wildcard)
+stmt s;
+Select s such that Uses (s, _)
+2,3,4,5,6,8,9,10,11,12,15,18,19,21,22,23,24,25,26,28,29,
+5000
+14 - Uses (proc, wildcard)
+procedure p;
+Select p such that Uses (p, _)
+Skywalker,
+5000
+15 - Uses (ident, var)
+variable v;
+Select v such that Uses ("Skywalker", v)
+procedure,x,y,z,t,Skywalker,Solo,Vader,while,Yoda,Kenobi,xx,yy,zz,tt,dd,k,m,n,then,else,if,Palpatine,
+5000
+16 - Uses (ident, var)
+variable v;
+Select v such that Uses ("test2", v)
+none
+5000
+17 - Uses (ident, ident)
+stmt s;
+Select s such that Uses ("Skywalker", "z")
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+18 - Uses (ident, ident)
+variable v;
+Select v such that Uses ("test2", "z")
+none
+5000
+19 - Uses (ident, wildcard)
+stmt s;
+Select s such that Uses ("Skywalker", _)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+20 - Uses (ident, wildcard)
+variable v;
+Select v such that Uses ("test2", _)
+none
+5000
+21 - Uses (integer, var)
+variable v;
+Select v such that Uses (26, v)
+x,y,Palpatine,
+5000
+22 - Uses (integer, var)
+variable v;
+Select v such that Uses (28, v)
+Palpatine,
+5000
+23 - Uses (integer, ident)
+stmt s;
+Select s such that Uses (24, "y")
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+24 - Uses (integer, ident)
+variable v;
+Select v such that Uses (26, "y")
+procedure,x,y,z,t,Skywalker,Solo,Vader,while,Yoda,Kenobi,xx,yy,zz,tt,dd,k,m,n,d,then,else,if,Palpatine,
+5000
+25 - Uses (integer, wildcard)
+stmt s;
+Select s such that Uses (1, _)
+none
+5000
+26 - Uses (integer, wildcard)
+variable v;
+Select v such that Uses (10, _)
+procedure,x,y,z,t,Skywalker,Solo,Vader,while,Yoda,Kenobi,xx,yy,zz,tt,dd,k,m,n,d,then,else,if,Palpatine,
+5000
+27 - Edge case Uses
+stmt s;
+Select s such that Uses ("      Skywalker      ", _)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+28 - Edge case Uses
+stmt s;
+Select s such that Uses (12, "     Kenobi     ")
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+5000
+29 - Invalid Uses
+procedure p;
+Select p such that Uses (p, 1)
+SyntaxError
+5000
+30 - Invalid Uses
+stmt s;
+Select s such that Uses (Skywalker, _)
+SemanticError
+5000
+31 - Invalid Uses
+stmt s;
+Select s such that Uses (1, Skywalker)
+SemanticError
+5000
+32 - Invalid Uses
+stmt s;
+Select s such that Uses ("", _)
+SyntaxError
+5000
+33 - Invalid Uses
+stmt s;
+Select s such that Uses (_, "")
+SyntaxError
+5000
+34 - Invalid Uses
+stmt s1, s2;
+Select s1 such that Uses (s1, s2)
+SemanticError
+5000
+35 - Invalid Uses
+stmt s; read r;
+Select s such that Uses (s, r)
+SemanticError
+5000
+36 - Invalid Uses
+stmt s; print p;
+Select s such that Uses (s, p)
+SemanticError
+5000
+37 - Invalid Uses
+stmt s; while w;
+Select s such that Uses (s, w)
+SemanticError
+5000
+38 - Invalid Uses
+stmt s; if i;
+Select s such that Uses (s, i)
+SemanticError
+5000
+39 - Invalid Uses
+stmt s; assign a;
+Select s such that Uses (s, a)
+SemanticError
+5000
+40 - Invalid Uses
+stmt s; constant c;
+Select s such that Uses (s, c)
+SemanticError
+5000
+41 - Invalid Uses
+stmt s; procedure p;
+Select s such that Uses (s, p)
+SemanticError
+5000
+42 - Invalid Uses
+constant c; variable v;
+Select s such that Uses (c, v)
+SemanticError
+5000
+43 - Invalid Uses
+variable v1, v2;
+Select v1 such that Uses (v1, v2)
+SemanticError
+5000
+44 - Invalid Uses
+variable v;
+Select v such that Uses (_, v)
+SemanticError
+5000

@@ -1,0 +1,145 @@
+1 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(_,"a b")
+SyntaxError
+5000
+2 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("a b",_)
+SyntaxError
+5000
+3 -
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("1fas",_)
+SyntaxError
+5000
+4 -
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(1,_)
+SyntaxError
+5000
+5 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,1)
+SyntaxError
+5000
+6 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(1,p)
+SyntaxError
+5000
+7 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"x*2")
+SyntaxError
+5000
+8 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select Calls such that Calls*("ttt+e", p)
+SyntaxError
+5000
+9 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls *(p,p1)
+SyntaxError
+5000
+10 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Call*(p,p)
+SyntaxError
+5000
+11 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("a",p4)
+SemanticError
+5000
+12 - 
+procedure p, p1, p2, p3, Calls, CallsT;variable v;
+Select p such that Calls*(v,p)
+SemanticError
+5000
+13 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p4 such that Calls*("c",p)
+SemanticError
+5000
+14 - 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("",p)
+SyntaxError
+5000
+15 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("e",p)
+SemanticError
+5000
+16 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("f",s)
+SemanticError
+5000
+17 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("g",a)
+SemanticError
+5000
+18 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("h",if)
+SemanticError
+5000
+19 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("i",while)
+SemanticError
+5000
+20 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("j",r)
+SemanticError
+5000
+21 - 
+call c; read r; print p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",c)
+SemanticError
+5000
+22 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p.procNam such that Calls*("k",p)
+SyntaxError
+5000
+23 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p.stmt# such that Calls*("k",p)
+SemanticError
+5000
+21 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p.procName)
+SyntaxError
+5000
+21 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p) with p.procName = 1
+SemanticError
+5000
+21 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p) with p.stmt# = 1
+SemanticError
+5000
+21 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p) with p.value = 1
+SemanticError
+5000
+21 - 
+call c; read r; procedure  p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p) with p.procName = "1"
+SyntaxError
+5000
+21 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; 
+Select p such that Calls*("k",p) with p.procName = "a b"
+SyntaxError
+5000

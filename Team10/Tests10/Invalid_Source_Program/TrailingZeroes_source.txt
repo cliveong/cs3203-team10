@@ -1,0 +1,1 @@
+procedure main { y = 0301; }

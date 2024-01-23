@@ -1,0 +1,11 @@
+procedure a {
+if (2==3) then {
+a = b + c;
+} else {
+a = 1 + 2;
+}
+while (1==2){
+read b;
+}
+
+}

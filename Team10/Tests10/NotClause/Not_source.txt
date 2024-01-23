@@ -1,0 +1,56 @@
+procedure Main {
+    read x;
+    if (x > 5) then {
+        y = 2 * x;
+        while (y > 0) {
+            if (y > 10) then {
+                z = y + 3;
+                print z;
+            }
+            else {
+                w = y - 2;
+                print w;
+            }
+            y = y - 1;
+            call ProcedureB;
+        }
+    }
+    else {
+        x = x + 2;
+        while (x < 10) {
+            if (x < 8) then {
+                a = x * 4;
+                print a;
+            }
+            else {
+                b = x - 2;
+                print b;
+            }
+            x = x + 1;
+        }
+    }
+}
+
+
+procedure ProcedureB {
+    x = x + 2;
+    while (w < 10) {
+        if (x < 8) then {
+            call ProcedureC;
+        }
+        else {
+            call ProcedureD;
+        }
+        x = x + 1;
+    }
+}
+
+procedure ProcedureC {
+    z = y + 3;
+    print z;
+}
+
+procedure ProcedureD {
+    w = y - 2;
+    print w;
+}

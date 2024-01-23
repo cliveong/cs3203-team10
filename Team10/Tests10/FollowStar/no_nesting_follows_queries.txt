@@ -1,0 +1,155 @@
+1 - Follows* stmt, read
+stmt s; read re;
+Select <s,re> such that Follows*(s, re)
+1 3,2 3,22 28,23 24,23 25,24 25
+5000
+2 - Follows* stmt, assign
+stmt s; assign a;
+Select <s,a> such that Follows*(s, a)
+1 16,1 4,11 16,12 14,13 14,2 16,2 4,26 27,3 16,3 4,31 32,31 33,32 33,4 16,5 16,6 7,8 10,9 10
+5000
+3 - Follows* stmt, print
+stmt s; print pn;
+Select <s,pn> such that Follows*(s, pn)
+1 2,12 13,12 15,13 15,14 15,19 20,22 29,28 29
+5000
+4 - Follows* stmt, call
+stmt s; call c;
+Select <s,c> such that Follows*(s, c)
+1 17,11 17,16 17,2 17,3 17,4 17,5 17,8 9
+5000
+5 - Follows* stmt, while
+stmt s; while w;
+Select <s,w> such that Follows*(s, w)
+1 11,2 11,22 30,28 30,29 30,3 11,4 11,5 11
+5000
+6 - Follows* stmt, if
+stmt s; if if;
+Select <s,if> such that Follows*(s, if)
+1 18,1 5,11 18,16 18,17 18,2 18,2 5,3 18,3 5,4 18,4 5,5 18
+5000
+7 - Follows* if, print
+if if; print pn;
+Select <if, pn> such that Follows*(if, pn)
+22 29
+5000
+8- Follows* if, while
+if if; while w;
+Select <if, w> such that Follows*(if, w)
+22 30,5 11
+5000
+9 - Follows* if, assign
+if if; assign a;
+Select <if, a> such that Follows*(if, a)
+5 16
+5000
+10 - Follows* if, call
+if if; call c;
+Select <if, c> such that Follows*(if, c)
+5 17
+5000
+11 - Follows* if, if
+if if, if1;
+Select <if, if1> such that Follows*(if, if1)
+5 18
+5000
+12 - Follows* if, read
+if if; read re;
+Select <if, re> such that Follows*(if, re)
+22 28
+5000
+13 - Follows* read, assign
+read re; assign a;
+Select <re, a> such that Follows*(re, a)
+12 14,3 16,3 4,6 7
+5000
+14 - Follows* read, print
+read re; print pn;
+Select <re, pn> such that Follows*(re, pn)
+12 13,12 15,28 29
+5000
+15 - Follows* read, while
+read re; while w;
+Select <re, w> such that Follows*(re, w)
+28 30,3 11
+5000
+16 - Follows* read, if
+read re; if if;
+Select <re, if> such that Follows*(re, if)
+3 18,3 5
+5000
+17 - Follows* read, call
+read re; call c;
+Select <re, c> such that Follows*(re, c)
+3 17
+5000
+18 - Follows* read, read
+read re, re1;
+Select <re, re1> such that Follows*(re, re1)
+24 25
+5000
+19 - Follows* while, if
+while w; if if;
+Select <w, if> such that Follows*(w, if)
+11 18
+5000
+20 - Follows* while, read
+while w; read re;
+Select <w, re> such that Follows*(w, re)
+
+5000
+21 - Follows* while, assign
+while w; assign a;
+Select <w, a> such that Follows*(w, a)
+11 16
+5000
+22 - Follows* while, print
+while w; print pn;
+Select <w, pn> such that Follows*(w, pn)
+
+5000
+23 - Follows* while, call
+while w; call c;
+Select <w, c> such that Follows*(w, c)
+11 17
+5000
+24 - Follows* while, while
+while w, w1;
+Select <w, w1> such that Follows*(w, w1)
+
+5000
+25 - Follows* assign, print
+assign a; print pn;
+Select <a, pn> such that Follows*(a, pn)
+1 2,14 15,19 20
+5000
+26 - Follows* assign, read
+assign a; read re;
+Select <a, re> such that Follows*(a, re)
+1 3,23 24,23 25
+5000
+27 - Follows* assign, if
+assign a; if if;
+Select <a, if> such that Follows*(a, if)
+1 18,1 5,16 18,4 18,4 5
+5000
+28 - Follows* assign, while
+assign a; while w;
+Select <a, w> such that Follows*(a, w)
+1 11,4 11
+5000
+29 - Follows* assign, call
+assign a; call c;
+Select <a, c> such that Follows*(a, c)
+1 17,16 17,4 17
+5000
+30 - Follows* assign, wildcard
+assign a; 
+Select a such that Follows*(a, _)
+1,14,16,19,23,32,4
+5000
+31 - Follows* assign, assign
+assign a, a1; 
+Select a such that Follows*(a, a1)
+1,32,4
+5000

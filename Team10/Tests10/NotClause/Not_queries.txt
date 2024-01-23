@@ -1,0 +1,86 @@
+1 - Negation with no synonyms
+
+Select BOOLEAN such that not Calls ("Main", "ProcedureB")
+FALSE
+5000
+2 - Negation with no synonyms
+
+Select BOOLEAN such that not Calls ("Main", "ProcedureC")
+TRUE
+5000
+3 - Negation with no synonyms
+constant c;
+Select c with not 5=10
+0,1,2,3,4,5,8,10
+5000
+4 - Negation with no synonyms
+constant c;
+Select c with not 5=5
+
+5000
+5 - Negation with one synonym proc
+procedure p;
+Select p such that not Calls* (p, "ProcedureC")
+ProcedureD, ProcedureC
+5000
+6 - Negation with one synonym while
+while w;
+Select w pattern not w("x", _)
+4, 21
+5000
+7 - Negation with one synonym assign
+assign a;
+Select a with not 10 = a.stmt#
+3,6,8,12,15,17,19,20,25,26,28
+5000
+8 - Negation with two synonyms 
+procedure p, q;
+Select p such that not Calls* (p, q)
+Main, ProcedureB, ProcedureC, ProcedureD
+5000
+9 - Negation with two synonyms 
+while w; variable v;
+Select <w, v> pattern not w(v, _)
+4 x, 4 z, 4 w, 4 a, 4 b, 13 y, 13 z, 13 w, 13 a, 13 b, 21 y, 21 x, 21 z, 21 a, 21 b
+5000
+10 - Negation with two synonyms 
+constant c; while w;
+Select c with not c.value = w.stmt#
+0,1,2,3,4,5,8,10
+5000
+11 - Negation with modifies
+variable v; 
+Select v such that not Modifies (6, v)
+x,y,w,a,b
+5000
+12 - Negation with multi cause
+assign a;
+Select a pattern a ( _ , _"y"_) such that not Follows* (5, a)
+6,8,26,28
+5000
+13 - Negation with multi cause
+assign a;
+Select a such that Parent* (4, a) pattern not a ( _ , "y-2")
+6,10
+5000
+14 - Negation with multi cause
+assign a; while w;
+Select w pattern a ("x", _) such that not Parent* (w, a)
+4,13,21
+5000
+15 - Negation with multi cause
+assign a; while w;
+Select w such that not Parent* (w, 6)
+13,21
+5000
+16 - Negation with multi cause
+assign a; while w;
+Select a pattern a ("x", _) such that not Parent* (w, a) and Follows (20, w)
+12,19,20
+5000
+17 - Negation with multi cause
+variable v; while w;
+Select v such that not Uses (w, v) and not Follows (3, w) and not Follows(20,w)
+y,z,w
+5000
+

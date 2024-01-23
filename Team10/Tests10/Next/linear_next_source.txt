@@ -1,0 +1,13 @@
+procedure first {
+	x = 1;
+	print x;
+	y = m;
+	read y;
+	call second;
+}
+
+procedure second {
+	print y;
+	x = 3 + l;
+	read smth;
+}

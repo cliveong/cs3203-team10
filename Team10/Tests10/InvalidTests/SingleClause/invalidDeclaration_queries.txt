@@ -1,0 +1,50 @@
+1 - Invalid design-entity
+var x;
+Select x
+SyntaxError
+5000
+2 - Invalid synonym (start with digit)
+variable 7x;
+Select x
+SyntaxError
+5000
+3 - Invalid synonym (special char not in PQL)
+variable #x;
+Select x
+SyntaxError
+5000
+4 - Invalid synonym (special char in PQL)
+variable x*;
+Select x
+SyntaxError
+5000
+5 - Invalid synonym (wildcard)
+variable _;
+Select x
+SyntaxError
+5000
+6 - Missing semicolon
+assign a variable x;
+Select x
+SyntaxError
+5000
+7 - Extra semicolon
+assign a;; variable x;
+Select x
+SyntaxError
+5000
+8 - Missing comma for multiple declarations for same design-entity
+variable x x1 x2;
+Select x
+SyntaxError
+5000
+9 - Synonym declared more than once (same design-entity)
+variable x, x, x2;
+Select x
+SemanticError
+5000
+10 - Synonym declared more than once (different design-entity)
+assign a; variable a;
+Select x
+SemanticError
+5000

@@ -1,0 +1,41 @@
+procedure Twilight {
+  Anya = 2;
+  Becky = 3 + Anya;
+  Loid = Becky * 5;
+  Fiona = 5;
+  while (Becky != 0) {
+    Loid = Loid - 1;
+    if (Loid == 6) then {
+      Anya = Anya - 1; }
+    else {
+      while (Fiona > 0) {
+	    Fiona = Fiona - 1; }
+      Fiona = Becky + Anya; }
+    Becky = Anya + Loid;
+    call Yor;
+    Becky = Becky + 1; }
+  call Franky; }
+
+procedure Yor {
+  if (Anya < 0) then {
+    while (Loid > 0) {
+      Anya = Becky * 4 + Fiona;
+      call Franky;
+      if (Anya <= 15) then {
+	    Anya = Fiona * Becky;
+	    Becky = 10; }
+      else {
+	    Anya = 1;
+	    Fiona = 6 * Becky; }
+      Loid = Loid + 1; }
+    Anya = Anya + Loid;
+    Becky = Anya + Becky; }
+  else {
+    Fiona = 1; }
+  Becky = Becky + Loid; }
+
+procedure Franky {
+  if (Fiona == 10) then {
+    Becky = Anya + 10; }
+  else {
+    Fiona = Becky + Fiona; } }

@@ -1,0 +1,37 @@
+procedure main {
+    x = 5;
+    y = 10;
+    z = x + y;
+    print z;
+    if (x < y) then {
+        x = x * y;
+        print a;
+    } else {
+        b = x - y;
+        print b;
+    }
+    while (x < y) {
+        while (a < b) {
+            while (a < b) {
+                     while (a < b) {
+                              while (a < d) {
+                                       while (a < b) {
+                                                while (a < b) {
+                                                         read b;
+                                                         a =    a+b    ;
+                                                         g = 3 +            c       ;
+                                                        }
+                                               }
+                                      }
+                             }
+                    }
+        }
+        x = x + 1;
+        print z;
+        if (a>   b   ) then {
+            y= a       ;
+        } else {
+            read a;
+        }
+    }
+}

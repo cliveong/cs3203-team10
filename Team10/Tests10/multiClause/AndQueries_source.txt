@@ -1,0 +1,45 @@
+procedure mickey {
+  donald = 2;
+  goofy = 3 + donald;
+  minnie = goofy * 5;
+  pluto = 5;
+  while (goofy != 0) {
+    minnie = minnie - 1;
+    if (minnie == 6) then {
+      donald = donald - 1; }
+    else {
+      while (pluto > 0) {
+        pluto = pluto - 1; }
+      pluto = goofy + donald; }
+    goofy = donald + minnie;
+    call daisy;
+    goofy = goofy + 1; }
+  call dumbo; }
+
+procedure daisy {
+  if (donald < 0) then {
+    while (minnie > 0) {
+      donald = goofy * 4 + pluto;
+      call dumbo;
+      if (donald <= 15) then {
+        donald = pluto * goofy;
+        pluto = 10; }
+      else {
+        donald = 1;
+        pluto = 6 * goofy; }
+      minnie = minnie + 1; }
+    donald = donald + 1;
+    pluto = donald + pluto; }
+  else {
+    pluto = 1; }
+  pluto = pluto + minnie; }
+
+procedure dumbo {
+  if (pluto == 10) then {
+    donald = donald + 10; }
+  else {
+    pluto = donald + pluto; }
+  read pluto;
+  read dumbo;
+  dumbo = dumbo + 19;
+  print dumbo; }

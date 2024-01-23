@@ -1,0 +1,70 @@
+1 - deep nesting parents*
+stmt s;
+Select s such that Parent*(4, s)
+5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33
+5000
+2 - deep nesting parents*
+stmt s;
+Select s such that Parent*(6, s)
+7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33
+5000
+3 - deep nesting parents*
+stmt s;
+Select s such that Parent*(9, s)
+10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+5000
+4 - deep nesting parents*
+stmt s;
+Select s such that Parent*(13, s)
+14, 15, 16, 17, 18, 19, 20
+5000
+5 - deep nesting parents*
+stmt s;
+Select s such that Parent*(21, s)
+22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33
+5000
+5 - deep nesting parents*
+stmt s;
+Select s such that Parent*(24, s)
+25, 26, 27, 28, 29, 30, 31, 32, 33
+5000
+6 - deep nesting parents*
+stmt s;
+Select s such that Parent*(27, s)
+28, 29, 30, 31
+5000
+7 - deep nesting parents
+stmt s;
+Select s such that Parent(24, s)
+25, 26, 27, 32, 33
+5000
+8 - deep nesting parents
+stmt s;
+Select s such that Parent(9, s)
+10, 11, 12, 13
+5000
+9 - deep nesting parents
+stmt s;
+Select s such that Parent(6, s)
+7, 8, 9, 21
+5000
+10 - deep nesting follows*
+stmt s;
+Select s such that Follows*(26, s)
+27, 32, 33
+5000
+11 - deep nesting follows*
+stmt s;
+Select s such that Follows*(4, s)
+34, 35
+5000
+12 - deep nesting follows*
+stmt s;
+Select s such that Follows*(3, s)
+4, 34, 35
+5000
+13 - deep nesting follows*
+stmt s;
+Select s such that Follows*(1, s)
+2, 3, 4, 34, 35
+5000

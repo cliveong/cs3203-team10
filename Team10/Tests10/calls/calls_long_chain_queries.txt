@@ -1,0 +1,20 @@
+1 - calls syn wild
+procedure p;
+Select p such that Calls (p, _)
+a,a1,b,b1,c,c1,d,d1,e,e1,f,f1,g,g1,h,h1,i,i1,j,j1,k,k1,l,l1,m,m1,n,n1,o,o1,p,p1,q,q1,r,r1,s,s1,t,t1,u,u1,v,v1,w,w1,x,x1,y,y1,z
+5000
+2 - calls wild syn
+procedure p;
+Select p such that Calls (_, p)
+a1,b,b1,c,c1,d,d1,e,e1,f,f1,g,g1,h,h1,i,i1,j,j1,k,k1,l,l1,m,m1,n,n1,o,o1,p,p1,q,q1,r,r1,s,s1,t,t1,u,u1,v,v1,w,w1,x,x1,y,y1,z,z1
+5000
+3 - calls star name syn
+procedure p;
+Select p such that Calls* ("m", p)
+a1,b1,c1,d1,e1,f1,g1,h1,i1,j1,k1,l1,m1,n,n1,o,o1,p,p1,q,q1,r,r1,s,s1,t,t1,u,u1,v,v1,w,w1,x,x1,y,y1,z,z1
+5000
+4 - calls star syn name
+procedure p;
+Select p such that Calls* (p, "t1")
+a,a1,b,b1,c,c1,d,d1,e,e1,f,f1,g,g1,h,h1,i,i1,j,j1,k,k1,l,l1,m,m1,n,n1,o,o1,p,p1,q,q1,r,r1,s,s1,t,u,v,w,x,y,z
+5000

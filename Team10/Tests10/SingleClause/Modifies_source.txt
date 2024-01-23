@@ -1,0 +1,27 @@
+procedure main {
+    s1 = apple;
+    s2 = 300;
+    if (apple > orange) then {
+        s1 = s1 + s2 / orange;
+        read s1;
+    } else {
+        print orange;
+        x1 = x1 + b + c - d;
+        while (x1 != 1) {
+            print x1;
+            read x1;
+            x3 = x3 / orange;
+        }
+    }
+
+    if (33 > s1) then {
+        s1 = s1 * s1;
+        read s1;
+    } else {
+        print s1;
+        s2 = tired + now / s3;
+    }
+    a2 = s1 + s2 - s3 - s4 + 2;
+    print ending;
+    read yay;
+}

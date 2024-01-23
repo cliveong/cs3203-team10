@@ -1,0 +1,7 @@
+procedure main {
+    x = x + 2;
+    x = y + (((2 + k)));
+    y = k;
+    x = (y + a) * (b + c);
+    x = a + ((b + c) / d) % e - j;
+}

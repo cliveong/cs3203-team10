@@ -1,0 +1,50 @@
+1 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName = c.procName
+
+5000
+2 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName = r.varName
+1,21
+5000
+3 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that not Follows(c,s) with not c.procName = r.varName
+1,4,11,18,21
+5000
+4 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Calls*(p, b) with not c.stmt# = p.procName
+SemanticError
+5000
+5 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with a.stmt# = s.stmt#
+
+5000
+6 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that not Follows(c,s) with not a.stmt# = 13
+
+5000
+7 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName = r.stmt#
+SemanticError
+5000
+8 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName = c.stmt##
+SyntaxError
+5000
+9 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName == r.varName
+SyntaxError
+5000
+10 - 
+call c; read r; procedure p; stmt s; assign a; if if; while while; print pt; constant ct; variable v;
+Select c such that Follows(c,s) with not c.procName = with r.varName = c.procName
+SyntaxError
+5000

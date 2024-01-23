@@ -1,0 +1,345 @@
+1 -   _, stmt number
+constant c;
+Select c such that Parent(_, 8)
+0, 5, 3, 2, 1, 10
+5000
+2 -   _, stmt number
+constant c;
+Select c such that Parent(_, 2)
+none
+5000
+3 -   stmt number, stmt
+stmt s;
+Select s such that Parent(6, s)
+67,68,7,8,9
+5000
+4 -   stmt number, read
+read r;
+Select r such that Parent(13, r)
+none
+5000
+5 -   stmt number, print
+print p;
+Select p such that Parent(26, p)
+none
+5000
+6 -   stmt number, assign
+assign a;
+Select a such that Parent(22, a)
+none
+5000
+7 -   stmt number, if
+if ifs;
+Select ifs such that Parent(39, ifs)
+none
+5000
+8 -   stmt number, while
+while w;
+Select w such that Parent(88, w)
+none
+5000
+9 -   stmt number, _
+constant c;
+Select c such that Parent(71, _)
+0,1,10,2,3,5
+5000
+10 -   stmt number, stmt number
+constant c;
+Select c such that Parent(2, 4)
+0,1,10,2,3,5
+5000
+11 -   stmt number, stmt number
+constant c;
+Select c such that Parent(1, 2)
+none
+5000
+12 -   stmt, stmt number
+stmt s;
+Select s such that Parent(s, 9)
+6
+5000
+13 -   stmt, stmt number orphan
+stmt s;
+Select s such that Parent(s, 2)
+none
+5000
+14 -   if, stmt number
+if ifs;
+Select ifs such that Parent(ifs, 16)
+15
+5000
+15 -   if, stmt number
+if ifs;
+Select ifs such that Parent(ifs, 1)
+none
+5000
+16 -   while, stmt number
+while w;
+Select w such that Parent(w, 4)
+2
+5000
+17 -   while, stmt number
+while w;
+Select w such that Parent(w, 1)
+none
+5000
+18 -   stmt, read
+stmt s; read r;
+Select s such that Parent(s, r)
+71, 31, 12, 34
+5000
+19 -   stmt, print
+stmt s; print p;
+Select s such that Parent(s, p)
+91, 100, 76, 94, 71, 86, 31, 61, 25, 6, 23, 12, 88, 27, 19, 17, 97, 34, 15, 39, 2, 9
+5000
+20 -   stmt, assign
+stmt s; assign a;
+Select s such that Parent(s, a)
+100, 91, 31, 86, 94, 71, 88, 27, 19, 17, 61, 25, 23, 97, 34, 15, 12, 6, 9, 2
+5000
+21 -   stmt, call
+stmt s; call c;
+Select s such that Parent(s, c)
+76
+5000
+22 -   stmt, while
+stmt s; while w;
+Select s such that Parent(s, w)
+15, 19, 2, 25, 27, 86, 9, 91, 97
+5000
+23 -   stmt, if
+stmt s; if ifs;
+Select s such that Parent(s, ifs)
+94, 31, 88, 71, 34, 23, 17, 12, 9, 6
+5000
+24 -   stmt, stmt (same) same syn
+stmt s;
+Select s such that Parent(s, s)
+none
+5000
+25 -   if, read
+if ifs; read r;
+Select ifs such that Parent(ifs, r)
+71, 34
+5000
+26 -   if, print
+if ifs; print p;
+Select ifs such that Parent(ifs, p)
+76, 71, 61, 39, 25, 34, 19, 15, 97, 91, 9
+5000
+27 -   if, assign
+if ifs; assign a;
+Select ifs such that Parent(ifs, a)
+71, 61, 25, 91, 9, 34, 19, 15, 97
+5000
+28 -   if, call
+if ifs; call c;
+Select ifs such that Parent(ifs, c)
+76
+5000
+29 -   if, while
+if ifs; while w;
+Select ifs such that Parent(ifs, w)
+15, 19, 25, 9, 91, 97
+5000
+30 -   if, if
+if ifs; if ifs1;
+Select ifs such that Parent(ifs, ifs1)
+34, 71, 9
+5000
+31 -   while, read
+while w; read r;
+Select w such that Parent(w, r)
+31, 12
+5000
+32 -   while, print
+while w; print p;
+Select w such that Parent(w, p)
+88, 86, 27, 23, 100, 6, 31, 94, 12, 17, 2
+5000
+33 -   while, assign
+while w; assign a;
+Select w such that Parent(w, a)
+88, 86, 27, 23, 31, 94, 100, 6, 12, 17, 2
+5000
+34 -   while, call
+while w; call c;
+Select w such that Parent(w, c)
+none
+5000
+35 -   while, while
+while w; while w1;
+Select w such that Parent(w, w1)
+86, 27, 2
+5000
+36 -   while, if
+while w; if ifs;
+Select w such that Parent(w, ifs)
+88, 94, 31, 12, 6, 23, 17
+5000
+37 -   _, stmt
+stmt s;
+Select s such that Parent(_, s)
+109, 108, 89, 107, 57, 106, 53, 105, 5, 104, 45, 103, 23, 102, 101, 9, 100, 3, 99, 70, 33, 24, 98, 97, 96, 95, 94, 80, 93, 47, 92, 44, 91, 90, 7, 88, 78, 34, 14, 87, 60, 49, 83, 61, 82, 77, 81, 28, 79, 17, 76, 41, 75, 74, 73, 72, 69, 66, 31, 68, 46, 67, 65, 64, 40, 63, 18, 62, 59, 58, 42, 10, 8, 56, 12, 55, 37, 32, 54, 30, 25, 52, 51, 29, 50, 48, 26, 43, 11, 39, 38, 36, 35, 27, 22, 21, 20, 19, 16, 15, 13, 6, 4
+5000
+38 -   _, print
+print p;
+Select p such that Parent(_, p)
+14, 18, 7, 104, 89, 82, 8, 78, 77, 73, 4, 101, 68, 28, 98, 66, 63, 87, 62, 40, 83, 107, 60, 105, 11, 75, 3, 58, 95, 48, 92, 45, 44, 38, 36, 24, 52, 103, 56, 33, 29, 41, 54, 50
+5000
+39 -   _, read
+read r;
+Select r such that Parent(_, r)
+35, 72, 32, 13
+5000
+40 -   _, assign
+assign a;
+Select a such that Parent(_, a)
+109, 108, 99, 81, 55, 51, 80, 74, 47, 70, 46, 64, 49, 106, 21, 59, 10, 57, 96, 102, 20, 93, 53, 67, 30, 37, 26, 69, 22, 65, 42, 5, 90, 43, 16
+5000
+41 -   _, ifs
+if ifs;
+Select ifs such that Parent(_, ifs)
+76, 61, 39, 91, 9, 25, 15, 97, 34, 19
+5000
+42 -   _, while
+while w;
+Select w such that Parent(_, w)
+88, 31, 94, 27, 100, 6, 12, 17, 23
+5000
+43 -   _, while
+while w;
+Select w such that Parent(_, w)
+88, 31, 94, 27, 100, 6, 12, 17, 23
+5000
+44 -   _, _
+constant c;
+Select c such that Parent(_, _)
+0, 5, 3, 2, 1, 10
+5000
+45 -   while, _
+while w;
+Select w such that Parent(w, _)
+88, 86, 31, 94, 27, 100, 6, 12, 17, 23, 2
+5000
+46 -   if, _
+if ifs;
+Select ifs such that Parent(ifs, _)
+76, 71, 61, 39, 91, 9, 25, 15, 97, 34, 19
+5000
+47 -   stmt, _
+stmt s;
+Select s such that Parent(s, _)
+100, 76, 97, 34, 15, 94, 71, 91, 88, 27, 19, 86, 31, 61, 25, 39, 9, 2, 23, 17, 12, 6
+5000
+48 -   stmt, _
+stmt s;
+Select BOOLEAN such that Parent(s, _)
+TRUE
+5000
+49 -   _, stmt
+stmt s;
+Select BOOLEAN such that Parent(_, s)
+TRUE
+5000
+50 -   _, _
+
+Select BOOLEAN such that Parent(_, _)
+TRUE
+5000
+51 -   stmt number, _
+
+Select BOOLEAN such that Parent(73, _)
+FALSE
+5000
+52 -   stmt number, _
+
+Select BOOLEAN such that Parent(33, _)
+FALSE
+5000
+53 -   _, stmt number
+
+Select BOOLEAN such that Parent(_, 5)
+TRUE
+5000
+54 -   _, stmt number
+
+Select BOOLEAN such that Parent(_, 18)
+TRUE
+5000
+55 -   stmt number, stmt number
+
+Select BOOLEAN such that Parent(23, 25)
+TRUE
+5000
+56 -   stmt number, stmt number
+
+Select BOOLEAN such that Parent(8, 19)
+FALSE
+5000
+57 -   if, stmt number
+if ifs;
+Select BOOLEAN such that Parent(ifs, 10)
+TRUE
+5000
+58 -   stmt number, while
+while w;
+Select BOOLEAN such that Parent(51, w)
+FALSE
+5000
+59 -  follows ish
+
+Select BOOLEAN such that Parent(1, 2)
+FALSE
+5000
+60 -   stmt, assign
+stmt s; assign a;
+Select BOOLEAN such that Parent(s, a)
+TRUE
+5000
+61 -   if, print
+if ifs; print p;
+Select <p.stmt#, p.varName> such that Parent(ifs, p)
+103 Draw, 104 NoShowdown, 105 yuh, 107 AntiLoneRanger, 11 WhyBubbleBuddy, 36 patrickStar, 38 ModdedpatrickStar, 40 LardPatrick, 41 PatrickInputisNotGreaterthanMine, 44 y, 45 MFDOOM, 48 SquidwardTentacles, 50 squidwardMood, 52 SquarePants, 54 spongebobFeeling, 56 PlanktonsEvilScheme, 58 planktonThoughts, 60 Iteration, 62 Sandy, 63 Not, 66 Calculating, 73 patrickStar2, 75 ModdedpatrickStar2, 77 LardPatrick2, 78 PatrickInputisNotGreaterthanMine2, 82 y2, 83 WERESOBACK, 92 LoneRangerCore, 98 HighNoonToTheMoon
+5000
+62 -   while, print
+while w; print p;
+Select <p.stmt#, p.varName> such that Parent(w, p)
+101 duelCountdown,14 planktonEvilScheme,18 spongebobSquarePants,24 squidwardTentacles,28 mrKrabsMoney,29 blingbling,3 jellyfishNet,33 planktonEvilPlan,4 whoYeeThere,68 girlCrush,7 sandyCheeks,8 crubbycode,87 giddyUp,89 bootsMadeForWalkin,95 AintNoWantedPostersFr
+5000
+63 -   read, print
+read r; print p;
+Select <r.stmt#, r.varName, p.stmt#, p.varName> such that Parent(r, p)
+none
+5000
+64 -   if, while
+if ifs; while w;
+Select <ifs, w> such that Parent(ifs, w)
+15 17, 19 23, 25 27, 9 12, 91 94, 97 100
+5000
+65 -    while, if
+if ifs; while w;
+Select <w, ifs> such that Parent(w, ifs)
+12 15,17 19,23 25,31 34,6 9,88 91,94 97
+5000
+66 -   while, assign
+while w; assign a;
+Select <w, a> such that Parent(w, a)
+12 59, 17 55, 2 5, 2 69, 2 70, 23 51, 27 30, 27 47, 31 46, 6 67, 100 102, 86 109, 88 108, 88 90, 94 106, 94 96
+5000
+67 -   stmt, read
+stmt s; read r;
+select s such that Parent(s, r)
+SyntaxError
+5000
+68 -   stmt, read
+stmt s; read r
+select s such that Parent(s, r)
+SyntaxError
+5000
+69 -   _, constant
+constant c;
+Select c such that Parent(3, c)
+SemanticError
+5000

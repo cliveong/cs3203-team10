@@ -1,0 +1,85 @@
+1 - Wildcard Wildcard Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*(_,_)
+
+5000
+2 - Wildcard String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*("a",_)
+
+5000
+3 - Wildcard Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*(p,_)
+h,j,z
+5000
+4 - String Wildcard Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*("d",_)
+
+5000
+5 - String String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*("f","j")
+
+5000
+6 - String Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*("i",p)
+a,b,c,d,e,f,g,h,i,k,l,m,n,o,p,q,r
+5000
+8 - Synonym String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select Calls such that not Calls*(Calls,"o")
+b,d,e,h,i,j,k,o,q,r,s,t,u,v,w,x,y,z
+5000
+9 - Synonym Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*(p,p1)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+10 - Same Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*(p,p)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+11 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*("a",_) with p.procName =    "t"
+
+5000
+12 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that not Calls*(p,_) with p.procName = p.procName
+h,j,z
+5000
+13 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT; call c;
+Select p such that not Calls*(p,_) with p.procName = c.procName
+h,j,z
+5000
+14 - Calls* attr select test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p.procName such that not Calls*("a",_) 
+
+5000
+15 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select BOOLEAN such that not Calls*("a",_)
+FALSE
+5000
+16 - Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN 
+such that not Calls*(" c	","	hh 	")
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+17 - Meaningless Queries
+procedure p, p1, p2, p3, Calls;Select 
+BOOLEAN such that not Calls*(" c	","	c 	")
+TRUE
+5000
+18- Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN such that not Calls*(p
+,p)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000

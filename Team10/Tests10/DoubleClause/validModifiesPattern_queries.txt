@@ -1,0 +1,65 @@
+1 - Modifies with int, string
+stmt s;variable v; assign a;
+Select v such that Modifies(5,"x") pattern a (_,_)
+x,y,z,a,b,c,g,d
+5000
+2 - Modifies with int, variable
+stmt s;variable v; assign a;
+Select v such that Modifies(10,v) pattern a (_,_)
+b, a, g, x, y
+5000
+3 - Modifies with stmt, wildcard
+stmt s;variable v; assign a;
+Select s such that Modifies(s,_) pattern a (_,_)
+1,2,3,5,6,8,10,11,12,13,14,15,16,17,18,19,20,22,23,24
+5000
+4 - Modifies with stmt, string
+stmt s;variable v; assign a;
+Select s such that Modifies(s,"x") pattern a (_,_)
+1,5,6,10,20
+5000
+5 - Modifies with stmt, variable
+stmt s;variable v; assign a;
+Select v such that Modifies(s,v) pattern a (_,_)
+x,y,z,b,a,g
+5000
+6 - Modifies with assign same as pattern
+variable v; assign a; stmt s;
+Select v such that Modifies(a,v) pattern a (_,_)
+x, y, z,b, a, g
+5000
+7 - Modifies with assign different from pattern
+variable v; assign a, a1; stmt s;
+Select v such that Modifies(a,v) pattern a1 (_,_"5"_)
+x, y, z,b, a, g
+5000
+8 - Modifies with variable same as pattern
+variable v; assign a; stmt s;
+Select s such that Modifies(s,v) pattern a (v,_"x"_)
+3,1,6,20,10,5,8,11,12,13,14,15,16,17
+5000
+9 - Modifies with variable different from pattern
+variable v, v1; assign a; stmt s;
+Select v such that Modifies(s,v) pattern a (v1,_)
+x,y,z,a,b,g
+5000
+10 - Modifies with assign and variable same as pattern
+variable v; assign a; stmt s;
+Select a such that Modifies(a,v) pattern a (v,_"a"_)
+18,23
+5000
+11 - Modifies with assign and variable different from pattern
+variable v, v1; assign a, a1; stmt s;
+Select a1 such that Modifies(a,v) pattern a1 (v1,_)
+1,2,3,6,8,18,19,20,23
+5000
+12 - Modifies with assign same, variable different from pattern
+variable v, v2; assign a; stmt s;
+Select a such that Modifies(a,"x") pattern a (v2,_)
+1,6,20
+5000
+13 - Modifies with assign different, variable same as pattern
+variable v, vv; assign a, assign; stmt s;
+Select v such that Modifies(a,v) pattern assign (vv,_)
+x,y,z,b,a,g
+5000

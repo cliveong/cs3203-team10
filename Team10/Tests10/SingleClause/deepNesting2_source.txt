@@ -1,0 +1,89 @@
+procedure main {
+    p = 1;
+    q = 2;
+    read gg;
+    while (c > 1) {
+        read y;
+        if (a > 2) then {
+            n = p + 1;
+        } else {
+            read lol;
+            if (c<4) then {
+                a = 4 * 2 + v;
+                a = j + k;
+            } else {
+                print teehee;
+                if (v<0) then {
+                    print yes;
+                    print no;
+                    while (no<0) {
+                        x = 1;
+                        if (he>eh) then {
+                            x = um;
+                            while (who>what) {
+                                read ifElse;
+                                while (have>not) {
+                                    print have;
+                                    v = yes;
+                                    while (last<one) {
+                                        print cya;
+                                    }
+                                }
+                            }
+                        } else {
+                            x = yum;
+                            while (how>to) {
+                                print where;
+                            }
+                        }
+                    }
+                    read yup;
+
+                } else {
+                    v = n;
+                    while (b>9) {
+                        while (c<60) {
+                            read taste;
+                        }
+                        print wano;
+                    }
+                    while (she<says) {
+                        print seashells;
+                        if (by>6) then {
+                            x = 5;
+                            read byTheSeashore;
+                        } else {
+                            read sheDoesnt;
+                        }
+                    }
+                }
+            }
+            while (s>0) {
+                read who;
+                j = k + p + i;
+                if (o > 0) then {
+                    print doThis;
+                } else {
+                    print doThat;
+                }
+            }
+        }
+        print yay;
+        read uhoh;
+    }
+    s = q + t;
+    read pie;
+    if (v < 3) then {
+        while (q<4) {
+            read play;
+            if (it>fits) then {
+                x = i;
+                print sits;
+            } else {
+                read guess;
+            }
+        }
+    } else {
+        read study;
+    }
+}

@@ -1,0 +1,29 @@
+procedure First {
+    read Twilight;
+    read Anya;
+    call Second;
+}
+
+procedure Second {
+    Twilight = 0;
+    Yor = 5;
+    while (Yor != 0) {
+        Twilight = Twilight + 2 * y;
+        call Third;
+        Yor = Yor - 1;
+    }
+    if (Twilight == 1) then {
+        Twilight = Twilight + 1;
+    } else {
+        Anya = 1;
+    }
+    Anya = Anya + Twilight + Yor;
+    y = Anya + 2;
+    Twilight = Twilight * y + Anya;
+}
+
+procedure Third {
+    Anya = 5;
+    Franky = Anya;
+    print Franky;
+}

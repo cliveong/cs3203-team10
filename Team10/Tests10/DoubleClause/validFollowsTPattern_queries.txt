@@ -1,0 +1,75 @@
+1 - Follows* with 2 wildcard
+stmt s1, s2; assign a;
+Select s1 such that Follows*(_,_) pattern a (_,_)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, 17, 18, 19, 20, 21, 22, 23, 24
+5000
+2 - Follows* with wildcard, int
+stmt s1, s2; assign a;
+Select s1 such that Follows*(_,7) pattern a (_,_)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, 17, 18, 19, 20, 21, 22, 23, 24
+5000
+3 - Follows* with wildcard, stmt
+stmt s1, s2; assign a;
+Select s2 such that Follows*(_,s2) pattern a (_,_)
+2,3,4,5,10,7,9,18,19,20,21,22
+5000
+4 - Follows* with int, wildcard
+stmt s1, s2; assign a;
+Select s2 such that Follows*(8,_) pattern a (_,_)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, 17, 18, 19, 20, 21, 22, 23, 24
+5000
+5 - Follows* with int, int
+stmt s1, s2; assign a;
+Select s2 such that Follows*(3,4) pattern a (_,_)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, 17, 18, 19, 20, 21, 22, 23, 24
+5000
+6 - Follows* with int, stmt
+stmt s1, s2; assign a;
+Select s2 such that Follows*(2,s2) pattern a (_,_)
+3, 4, 5, 10
+5000
+7 - Follows* with stmt, wildcard
+stmt s1, s2; assign a;
+Select s1 such that Follows*(s1,_) pattern a (_,_)
+1,2,3,4,5,6,8,11,20,21,17,18
+5000
+8 - Follows* with stmt, int
+stmt s1, s2; assign a;
+Select s1 such that Follows*(s1,11) pattern a (_,_)
+
+5000
+9 - Follows* with stmt, stmt
+stmt s1, s2; assign a;
+Select s1 such that Follows*(s1,s2) pattern a (_,_)
+1,2,3,4,5,6,8,11,20,21,17,18
+5000
+10 - Follows* with wildcard, int
+stmt s1, s2; assign a;
+Select s1 such that Follows*(_,0) pattern a (_,_)
+
+5000
+11 - Follows* with wildcard, int
+stmt s1, s2; assign a;
+Select s1 such that Follows*(_,1) pattern a (_,_)
+
+5000
+12 - Follows* with assign, stmt
+stmt s1, s2; assign a;
+Select s2 such that Follows*(a,s2) pattern a (_,_)
+2, 3, 4, 5, 10, 7, 9, 21, 19, 22
+5000
+13 - Follows* with assign, stmt, pattern with string, wildcard
+stmt s1, s2; assign a;
+Select s2 such that Follows*(a,s2) pattern a ("b",_)
+9
+5000
+14 - Follows* with assign, stmt, pattern with string, pattern
+stmt s1, s2; assign a;
+Select s2 such that Follows*(a,s2) pattern a ("x",_"  x "_)
+7, 21, 22
+5000
+15 - Follows* with assign, stmt, pattern with wildcard, pattern
+stmt s1, s2; assign a;
+Select s2 such that Follows*(a,s2) pattern a (_,_"  x "_)
+4, 5, 10, 7, 9, 21, 22
+5000

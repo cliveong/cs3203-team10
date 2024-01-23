@@ -1,0 +1,290 @@
+1 -
+
+Select BOOLEAN such that Affects(5, 6)
+FALSE
+5000
+2 -
+
+Select BOOLEAN such that Affects(5, 9)
+TRUE
+5000
+3 -
+
+Select BOOLEAN such that Affects(7, 11)
+TRUE
+5000
+4 -
+
+Select BOOLEAN such that Affects(7, 13)
+TRUE
+5000
+5 -
+
+Select BOOLEAN such that Affects(12, 9)
+FALSE
+5000
+6 -
+
+Select BOOLEAN such that Affects(12, 14)
+FALSE
+5000
+7 -
+
+Select BOOLEAN such that Affects(9, 9)
+TRUE
+5000
+8 -
+
+Select BOOLEAN such that Affects(4, 7)
+TRUE
+5000
+9 -
+
+Select BOOLEAN such that Affects(4, 13)
+TRUE
+5000
+10 -
+
+Select BOOLEAN such that Affects(4, 14)
+FALSE
+5000
+11 -
+
+Select BOOLEAN such that Affects(12, 15)
+FALSE
+5000
+12 -
+assign a;
+Select BOOLEAN such that Affects(a, 9)
+TRUE
+5000
+13 -
+assign a;
+Select a such that Affects(a, 9)
+5, 9
+5000
+14 -
+assign a;
+Select a such that Affects(a, 14)
+13,
+5000
+15 -
+assign a;
+Select a such that Affects(7, a)
+7, 11, 13, 15,
+5000
+16 -
+assign a;
+Select a such that Affects(5, a)
+9, 13,
+5000
+17 -
+assign a1, a2;
+Select a1 such that Affects(a1, a2)
+4, 5, 7, 9, 11, 12, 13, 14, 16
+5000
+18 -
+assign a1, a2;
+Select a2 such that Affects(a1, a2)
+7, 9, 11, 13, 14, 15, 17
+5000
+19 -
+assign a1, a2;
+Select <a1, a2> such that Affects(a1, a2)
+4 11, 4 13, 4 15, 4 7, 5 9, 5 13, 7 11, 7 13, 7 15, 7 7, 9 13, 9 9, 11 13, 11 15, 12 13, 13 14, 13 15, 14 15, 16 17,
+5000
+20 -
+assign a;
+Select a such that Affects(a, a)
+7, 9,
+5000
+21 -
+procedure p;
+Select BOOLEAN such that Affects(9, p)
+SemanticError
+5000
+22 -
+print p;
+Select BOOLEAN such that Affects(9, p)
+FALSE
+5000
+23 -
+variable v;
+Select BOOLEAN such that Affects(9, v)
+SemanticError
+5000
+24 -
+while w;
+Select BOOLEAN such that Affects(9, w)
+FALSE
+5000
+25 -
+call c;
+Select BOOLEAN such that Affects(9, c)
+FALSE
+5000
+26 -
+if i;
+Select BOOLEAN such that Affects(9, i)
+FALSE
+5000
+27 -
+read r;
+Select BOOLEAN such that Affects(9, r)
+FALSE
+5000
+28 -
+stmt s;
+Select BOOLEAN such that Affects(9, s)
+TRUE
+5000
+29 -
+
+Select BOOLEAN such that Affects(9, "i")
+SyntaxError
+5000
+30 -
+
+Select BOOLEAN such that Affects(5, 6)
+FALSE
+5000
+31 -
+
+Select BOOLEAN such that Affects(5, 9)
+TRUE
+5000
+32 -
+
+Select BOOLEAN such that Affects(7, 11)
+TRUE
+5000
+33 -
+
+Select BOOLEAN such that Affects(7, 13)
+TRUE
+5000
+34 -
+
+Select BOOLEAN such that Affects(12, 9)
+FALSE
+5000
+35 -
+
+Select BOOLEAN such that Affects(12, 14)
+FALSE
+5000
+36 -
+
+Select BOOLEAN such that Affects(9, 9)
+TRUE
+5000
+37 -
+
+Select BOOLEAN such that Affects(4, 7)
+TRUE
+5000
+38 -
+
+Select BOOLEAN such that Affects(4, 13)
+TRUE
+5000
+39 -
+
+Select BOOLEAN such that Affects(4, 14)
+FALSE
+5000
+40 -
+
+Select BOOLEAN such that Affects(12, 15)
+FALSE
+5000
+41 -
+assign a;
+Select BOOLEAN such that Affects(a, 9)
+TRUE
+5000
+42 -
+assign a;
+Select a such that Affects(a, 9)
+5, 9
+5000
+43 -
+assign a;
+Select a such that Affects(a, 14)
+13
+5000
+44 -
+assign a;
+Select a such that Affects(7, a)
+7, 11, 13, 15
+5000
+45 -
+assign a;
+Select a such that Affects(5, a)
+9, 13,
+5000
+46 -
+assign a1, a2;
+Select a1 such that Affects(a1, a2)
+4, 5, 7, 9, 11, 12, 13, 14, 16
+5000
+47 -
+assign a1, a2;
+Select a2 such that Affects(a1, a2)
+7, 9, 11, 13, 14, 15, 17
+5000
+49 -
+assign a1, a2;
+Select <a1, a2> such that Affects(a1, a2)
+11 13,11 15,12 13,13 14,13 15,14 15,16 17,4 11,4 13,4 15,4 7,5 13,5 9,7 11,7 13,7 15,7 7,9 13,9 9
+5000
+49 -
+assign a;
+Select a such that Affects(a, a)
+7, 9,
+5000
+50 -
+procedure p;
+Select BOOLEAN such that Affects(9, p)
+SemanticError
+5000
+51 -
+print p;
+Select BOOLEAN such that Affects(9, p)
+FALSE
+5000
+52 -
+variable v;
+Select BOOLEAN such that Affects(9, v)
+SemanticError
+5000
+53 -
+while w;
+Select BOOLEAN such that Affects(9, w)
+FALSE
+5000
+54 -
+call c;
+Select BOOLEAN such that Affects(9, c)
+FALSE
+5000
+55 -
+if i;
+Select BOOLEAN such that Affects(9, i)
+FALSE
+5000
+56 -
+read r;
+Select BOOLEAN such that Affects(9, r)
+FALSE
+5000
+57 -
+stmt s;
+Select BOOLEAN such that Affects(9, s)
+TRUE
+5000
+58 -
+
+Select BOOLEAN such that Affects(9, "i")
+SyntaxError
+5000

@@ -1,0 +1,31 @@
+procedure Skywalker{
+  procedure = 5;
+  Skywalker = 5*8 + x*y-z + t;
+  if ((Solo==Vader)||(while!=Yoda)) then{
+    if ((Solo<=Vader)||(Kenobi!=(xx+yy*zz+tt*dd))) then{
+      Vader = Solo;
+      Kenobi = t + 342708 + 961245 *z + ((x*y) *k);} else{
+      procedure = 10;}
+    Skywalker = t*m+n;} else{
+    while(x!=while) {
+      print x;
+      print y;}
+    z = x * y + procedure * Skywalker / Solo * Vader + Kenobi;}
+  read procedure;
+  read Skywalker;
+  while (Skywalker!=procedure){
+    read t;
+    read d;
+  }
+  if ((then==65378) &&(else>29673)) then{
+    print if;
+    read y;
+    while (procedure!=Skywalker){
+      Skywalker = procedure;}
+    x = y;} else{
+    while(y!=x){
+      y = x;
+      if (y!=x) then{
+        read else; } else{
+        print Palpatine;}}
+    x = y;}}

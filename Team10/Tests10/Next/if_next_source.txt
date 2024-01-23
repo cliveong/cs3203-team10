@@ -1,0 +1,37 @@
+procedure IfAtBeginning {
+    if (x == 2) then {
+        print smth;
+        z = x - y; 
+    }
+    else {
+        z = y - x;
+    }
+
+    a = 2 * z;
+}
+
+procedure IfInMiddle {
+    l = 5;
+    if (x > y) then {
+        z = x - y;
+    }
+    else {
+        read it;
+        b = y - x; 
+    }
+    p = 2 * z;
+}
+
+procedure IfAtEnd {
+    x = 5;
+    y = 10;
+
+    if (x > y) then {
+        call IfInMiddle;
+        z = x - y;   
+    }
+    else {
+        z = y - x;
+        print g;
+    }
+}

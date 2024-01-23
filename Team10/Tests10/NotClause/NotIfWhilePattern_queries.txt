@@ -1,0 +1,165 @@
+1 - BOOLEAN not if pattern
+if if;
+Select BOOLEAN pattern not if(_, _       , _)
+FALSE
+5000
+2 - BOOLEAN not while pattern
+while if;
+Select BOOLEAN pattern not if(_      , _)
+TRUE
+5000
+3 - select all not if statements
+if if;
+Select if pattern       not if("y"       ,_,_)
+10, 21, 23
+5000
+4 - select all not while statements
+while w;
+Select w.        stmt# pattern not w("b         ",_)
+3, 13
+5000
+5 - select all variable not in if statement
+if Parent; variable v;
+Select       Parent pattern not Parent(v,_, _)
+5,10,15,16,21,23
+5000
+6 - select all variable not in while statement
+while Uses; variable v;
+Select Uses pattern          not Uses(v,_)
+3, 8, 13, 19
+5000
+7 - multi-clause not if and while, explicit and
+if if; while w; variable v;
+Select  <      if, w, v.    varName> pattern not if(v,_,_) and w(v,_)
+10 3 x, 15 3 x, 16 3 x, 21 3 x, 23 3 x, 10 3 y, 21 3 y, 23 3 y, 5 3 z, 15 3 z, 5 8 a, 10 8 a, 15 8 a, 16 8 a, 23 8 a, 5 8 b, 10 8 b, 15 8 b, 23 8 b, 10 8 c, 15 8 c, 16 8 c, 23 8 c, 5 8 d, 10 8 d, 15 8 d, 16 8 d, 21 8 d, 23 8 d, 5 8 e, 10 8 e, 15 8 e, 16 8 e, 21 8 e, 23 8 e, 5 8 f, 15 8 f, 16 8 f, 21 8 f, 23 8 f, 5 19 b, 10 19 b, 15 19 b, 23 19 b
+5000
+8 - multi-clause if and not while, implicit and
+if if; while w; variable v;
+Select <w         , v> pattern if(v,_,_) pattern not w(v,_)
+3 a, 3 b, 3 c, 3 f, 8 x, 8 y, 8 z, 13 a, 13 b, 13 c, 13 f, 13 x, 13 y, 13 z, 19 a, 19 c, 19 f, 19 x, 19 y, 19 z
+5000
+9 - multi-clause not if-pattern Modifies
+if if; assign a; variable v;
+Select v pattern not if(        v,        _, _) such that Modifies(a, v)
+y, a, b
+5000
+10 - multi-clause not while-pattern Parent
+if if; while while; variable v;
+Select if pattern not while(_,       _) such that Parent(if, while)
+
+5000
+11 - multi-clause not while-pattern Uses and Parent
+if if; while while; variable v; assign BOOLEAN;
+Select if pattern       not while(v,_) such that Uses(   BOOLEAN, v) and Parent(if,     BOOLEAN)
+5, 16
+5000
+12 - multi-clause not if-pattern and with clause varName
+if if; while while; variable v;
+Select <if.stmt#, v> pattern not if(v,_     ,_) with v.varName = "z     "
+5 z, 15 z
+5000
+13 - multi-clause not if-pattern and with clause constant value
+if if; while while; variable v; constant cn;
+Select <v,     cn.    value> pattern not if(v,_,_) with if.stmt# = cn.value
+a 5, b 5, d 5, e 5, f 5, k 5, z 5
+5000
+14 - synonym name not
+if not;
+Select not pattern not not(_,_,_)
+
+5000
+15 - not before 'pattern'
+if if; variable v;
+Select if not pattern Uses(v,_)
+SyntaxError
+5000
+16 - not after synonym
+if if; variable v;
+Select if pattern Uses not(v,_)
+SyntaxError
+5000
+17 - extra 'pattern' after explicit and
+if if, if1; variable v;
+Select <if.stmt#, if1> pattern if(v,_,_) and pattern not if1(_,_,_)
+SyntaxError
+5000
+18 - missing pattern after explicit and not
+if if, if1; variable v;
+Select if pattern not if(v,_,_) and
+SyntaxError
+5000
+19 - implicit and missing pattern
+if if; while w; variable v;
+Select if pattern not if(v,_,_) not w(_,_)
+SyntaxError
+5000
+20 - missing comma in if-pattern
+if if; while w; variable v;
+Select if pattern not if(v,_    _)
+SyntaxError
+5000
+21 - missing comma in while-pattern
+if if; while w; variable v;
+Select w pattern not w(v   _)
+SyntaxError
+5000
+22 - missing comma in while-pattern
+if if; while w; variable v;
+Select w pattern  not w(v   _)
+SyntaxError
+5000
+23 - space in string argument
+if if; while w; variable v;
+Select w pattern not w("a   b",   _)
+SyntaxError
+5000
+24 - three arguments for while pattern
+if if; while w; variable v;
+Select w pattern not w(v,_,_) and w(_,_)
+SemanticError
+5000
+25- two arguments for if pattern
+if if; while w; variable v;
+Select if pattern not if(v,_,_) and if(_,_)
+SemanticError
+5000
+26 - assign-pattern syntax for if pattern
+if if; while w; variable v;
+Select if pattern not if(v, "x")
+SemanticError
+5000
+27 - assign-pattern syntax for while pattern
+if if; while w; variable v;
+Select w pattern not w(v, "x")
+SemanticError
+5000
+28 - statement in first argument for if pattern
+stmt a; if if; while w; variable v;
+Select if pattern not if(a, _,_)
+SemanticError
+5000
+29 - statement in first argument for while pattern
+stmt a; if if; while w; variable v;
+Select w pattern not w(a, _)
+SemanticError
+5000
+30 - procedure in first argument for if pattern
+procedure a; if if; while w; variable v;
+Select if pattern not if(a, _,_)
+SemanticError
+5000
+31 - procedure in first argument for while pattern
+procedure a; if if; while w; variable v;
+Select w pattern not w(a, _)
+SemanticError
+5000
+32 - constant in first argument for if pattern
+constant a; if if; while w; variable v;
+Select if pattern not if(a, _,_)
+SemanticError
+5000
+33 - constant in first argument for while pattern
+constant a; if if; while w; variable v;
+Select w pattern not w(a, _)
+SemanticError
+5000

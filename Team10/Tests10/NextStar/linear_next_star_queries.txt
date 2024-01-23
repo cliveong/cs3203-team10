@@ -1,0 +1,65 @@
+1 - Boolean true
+
+Select BOOLEAN such that Next*(1,2)
+TRUE
+5000
+2 - Boolean true not direct next
+
+Select BOOLEAN such that Next*(1,3)
+TRUE
+5000
+3 - Boolean false different procedure
+
+Select BOOLEAN such that Next*(6,7)
+FALSE
+5000
+4 - Next with one synonym first arg
+stmt s;
+Select s such that Next*(s,5)
+1,2,3,4
+5000
+5 - Next with one synonym second arg
+stmt s;
+Select s such that Next*(2,s)
+3,4,5,6
+5000
+6 - No next value
+stmt s;
+Select s such  that Next*  (6,s)
+
+5000
+7 - All next relations 
+stmt s, s1;
+Select <s, s1> such that Next*(s,s1)
+1 2, 1 3, 1 4, 1 5, 1 6, 2 3, 2 4, 2 5, 2 6, 3 4, 3 5, 3 6, 4 5, 4 6, 5 6, 7 8, 7 9, 7 10, 7 11, 7 12, 7 13, 7 14, 8 9, 8 10, 8 11, 8 12, 8 13, 8 14, 9 10, 9 11, 9 12, 9 13, 9 14, 10 11, 10 12, 10 13, 10 14, 11 12, 11 13, 11 14, 12 13, 12 14, 13 14
+5000
+8 - Next same synonym assign, assign
+assign a, a1;
+Select <a,a1> such that Next*(a,a1)
+1 4, 1 6, 4 6, 8 12, 8 13, 12 13
+5000
+9 - Next with two different synonyms
+print pn; assign a;
+Select a such that Next*(pn,     a   )
+4, 6, 8, 12, 13
+5000
+10 - Next two clauses
+read re; assign a, a1;
+Select a such that Next*(re, a) and Next*(a,a1)
+4, 12
+5000
+11 - Next wildcard
+stmt s;
+Select s such that Next*(s,_)
+1,2,3,4,5,7,8,9,10,11,12,13
+5000
+12 - Next invalid arg
+print pn; 
+Select pn such that Next*(pn,     "a")
+SyntaxError
+5000
+13 - Next invalid
+print pn; assign a;
+Select a such that Next  *  (pn,     a   )
+SyntaxError
+5000

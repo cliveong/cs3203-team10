@@ -1,0 +1,5 @@
+1 - all variables
+variable v;
+Select v
+
+5000

@@ -1,0 +1,57 @@
+procedure main {
+    x1 = 1;
+    x2 = 998;
+    while ((x1 > 0) && (x2 > 0)) {
+        k = x1;
+        if (y != 0) then {
+            y = x2 + x1;
+        } else {
+            read y1;
+            print z1;
+            if (z1 > 300) then {
+                read s1;
+            } else {
+                print s1;
+                if (xx != yy) then {
+                    print xx;
+                } else {
+                    read kk;
+                }
+                while (s1 > s2 + s3) {
+                    k = k + a * b + c;
+                }
+                tester = k + ops;
+            }
+            print tmd;
+            while (xx > n) {
+                n = 7 * 8;
+            }
+            print yy;
+            if (xx < yy) then {
+                read xx;
+            } else {
+                print kk;
+            }
+            if (xx < yy) then {
+                read xx;
+            } else {
+                print kk;
+            }
+            tester = 1;
+        }
+        read x1;
+        print x2;
+    }
+    while (tehhe != xx) {
+        read xx;
+    }
+    read kk;
+    while (tehhe != xx) {
+        read xx;
+    }
+    if (xx < yy) then {
+        read xx;
+    } else {
+        print kk;
+    }
+}

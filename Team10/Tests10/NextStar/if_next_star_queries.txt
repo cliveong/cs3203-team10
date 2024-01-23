@@ -1,0 +1,70 @@
+1 - Next with one synonym first arg, if at start
+stmt s;
+Select s such that Next*(s,5)
+1,2,3,4
+5000
+2 - Next with one synonym first arg, if in middle
+stmt s;
+Select s such that Next*(s,10)
+6,7,9
+5000
+3 - Next with one synonym first arg, if at end
+stmt s;
+Select s such that Next*(s,18)
+12,13,14,17
+5000
+3 - Next with one synonym second arg, if at start
+stmt s;
+Select s such that Next*(1,s)
+2,3,4,5
+5000
+4 - Next with one synonym second arg, if in middle
+stmt s;
+Select s such that Next*(9,s)
+10,11
+5000
+5 - Next with one synonym second arg, if at end
+stmt s;
+Select s such that Next*(15,s)
+16
+5000
+6 - All next* relations
+stmt s, s1;
+Select <s,s1> such that Next*(s,s1)
+1 2, 1 3, 1 4, 1 5, 2 3, 2 5, 3 5, 4 5, 6 7, 6 8, 6 9, 6 10, 6 11, 7 8, 7 9, 7 10, 7 11, 8 11, 9 10, 9 11, 10 11, 12 13, 12 14, 12 15, 12 16, 12 17, 12 18, 13 14, 13 15, 13 16, 13 17, 13 18, 14 15, 14 16, 14 17, 14 18, 15 16, 17 18
+5000
+7 - All stmt with next*
+stmt s, s1;
+Select s such that Next*(s,s1)
+1,2,3,4,6,7,8,9,10,12,13,14,15,17
+5000
+8 - Two next clause select if children
+stmt s, s1;
+Select s such that Next*(7,s) and Next*(s, 11)
+8,9,10
+5000
+9 - Two next clause select if stmt
+stmt s, s1, s2;
+Select s such that Next*(s,s1) and Next*(s, s2) with not s1.stmt# = s2.stmt#
+1,2,6,7,9, 12,13, 14
+5000
+10 - Next if, print
+if if; print pn;
+Select if such that Next*(if,pn)
+1, 14
+5000
+11 - Next if, assign
+if if; assign a;
+Select a such that Next*(if,a)
+3,4,5,8,10,11,16,17
+5000
+12 - Next if, read
+if if; read re;
+Select re such that Next*(if, re)
+9
+5000
+13 - Next select stmt inside and outside if
+assign a, a1;
+Select a such that Next*(a,a1)
+3,4,6,8,10, 12,13
+5000

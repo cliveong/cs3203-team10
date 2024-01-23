@@ -1,0 +1,29 @@
+procedure WhileAtBeginning {
+    while (x < 5) {
+        print x;
+        x = x + 1;
+    }
+    
+    a = 2 * x;
+}
+
+procedure WhileInMiddle {
+    x = 1;
+    while (x <= 10) {
+        x = x + 2;
+        print x;
+    }
+    
+    read smth;
+}
+
+procedure WhileAtEnd {
+    x = 5;
+    print smth;
+
+    while (x > y) {
+        call WhileInMiddle;
+        x = x - 1;
+        y = y + 1;
+    }
+}

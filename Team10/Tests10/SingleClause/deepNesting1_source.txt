@@ -1,0 +1,52 @@
+procedure main {
+    p = 1;
+    q = 2;
+    read gg;
+    while (c > 1) {
+        read y;
+        if (a > 2) then {
+            n = p + 1;
+        } else {
+            read lol;
+            if (c<4) then {
+                a = 4 * 2 + v;
+                a = j + k;
+            } else {
+                print teehee;
+                while (o>9) {
+                    read there;
+                    read where;
+                    if (t>l) then {
+                        if (who>4) then {
+                            print where;
+                        } else {
+                            print what;
+                        }
+                    } else {
+                        read this;
+                    }
+                }
+            }
+            while (s>0) {
+                read who;
+                j = k + p + i;
+                if (o > 0) then {
+                    print doThis;
+                } else {
+                    print doThat;
+                    while (b>4) {
+                        x = v + g;
+                        read define;
+                        while (n>7) {
+                            print really;
+                        }
+                    }
+                    read says;
+                    print said;
+                }
+            }
+        }
+    }
+    s = q + t;
+    read pie;
+}

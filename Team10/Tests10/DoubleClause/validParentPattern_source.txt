@@ -1,0 +1,14 @@
+procedure main {
+    x = 2;
+    y = 5;
+    i = 0;
+    while (i < 10) {
+        if (x < 2) then {
+            i = 50;
+            y = y * x;
+        } else {
+            i = i + 1;
+            x = y / i;
+        }
+    }
+}

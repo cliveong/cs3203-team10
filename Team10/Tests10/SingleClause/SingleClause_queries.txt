@@ -1,0 +1,140 @@
+1 - all variables
+variable a;
+Select a
+i, x, y, z, ntg
+5000
+2 - all stmts
+stmt a;
+Select a
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+5000
+3 - all ifs
+if ifs;
+Select ifs
+8,15
+5000
+4 - all whiles
+while w;
+Select w
+5,17
+5000
+5 - all assigns
+assign a;
+Select a
+1,2,3,4,6,7,9,10,16,18,19
+5000
+6 - all constants
+constant c;
+Select c
+0, 10, 15, 50, 1
+5000
+7 - all read
+read r;
+Select r
+13,14
+5000
+8 - all print
+print pn;
+Select pn
+11,12
+5000
+9 - same stmt list
+stmt s;
+Select s such that Follows(s,3)
+2
+5000
+10 - immediately before while loop
+stmt s;
+Select s such that Follows(4, s)
+5
+5000
+11 - follows*
+stmt s;
+Select s such that Follows*(4, s)
+5, 8, 11,12,13,14,15
+5000
+12 - parent
+stmt s;
+Select s such that Parent(s,6)
+5
+5000
+13 - parent*
+stmt s;
+Select s such that Parent*(s,6)
+5
+5000
+14 - uses
+variable v; stmt s;
+Select s such that Uses(s, v)
+2,5,6,7,8,9,10,11,12,15,17,18
+5000
+15 - uses while with string x
+while w;
+Select w such that Uses(w, "i")
+5
+5000
+16 - uses while 2 synonyms
+while w; variable v;
+Select w such that Uses(w, v)
+5,17
+5000
+17 - assignments within while loop
+assign a; while w;
+Select a such that Parent* (w, a)
+6,7,18
+5000
+18 - var used by 6
+variable v;
+Select v such that Uses (6, v)
+x,y
+5000
+19 - uses if with string
+if ifs; variable v;
+Select ifs such that Uses(ifs, v)
+8,15
+5000
+20 - uses if with string y
+if ifs; variable v;
+Select ifs such that Modifies(ifs, "y")
+8
+5000
+21 - uses if with string
+if ifs; variable v;
+Select v such that Modifies(ifs, v)
+y,ntg
+5000
+22 - pattern
+assign A; variable b;
+Select b pattern A(b, _"y"_)
+x, y
+5000
+23 - pattern
+assign A; variable Bb;
+Select Bb pattern A("x", _)
+i, x, y, z, ntg
+5000
+24 - all read stmt
+assign A; read Bb;
+Select Bb pattern A("x", _)
+13, 14
+5000
+25 - all stmt with x on lhs
+assign A; stmt Bb;
+Select A pattern A("x", _)
+2,6
+5000
+26 - all assign with y on both sides
+assign HEY;
+Select HEY pattern HEY("y", _"y"_)
+9,10
+5000
+27 - all assign with y on both sides
+assign HEY, Hey; variable grr;
+Select grr pattern Hey(grr, _"10"_)
+y,ntg
+5000
+28 - variables in loop
+variable v; stmt k; if ifs;
+Select ifs such that Modifies(ifs, "ntg")
+15
+5000

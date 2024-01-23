@@ -1,0 +1,105 @@
+1 - Uses: stmt, entRef
+stmt ss;
+Select ss such that Uses(ss, "a")
+5,6,9,12
+5000
+2 - Uses: stmt, variable
+stmt S1; variable v1;
+Select S1 such that Uses(S1, v1)
+2,4,5,6,7,9,10,12,13,14
+5000
+3 - Uses: assign, entRef
+assign a;
+Select a such that Uses(a, "a")
+6,9
+5000
+4 - Uses: assign, variable
+assign a; variable v;
+Select a such that Uses(a,v)
+2,6,9,13,14
+5000
+5 - Uses: if, entRef
+if i;
+Select i such that Uses(i, "s6")
+5
+5000
+6 - Uses: if, variable
+if i; variable v;
+Select v such that Uses(i, v)
+a,b,s3,s6,s5,s7,s4,x3,x2
+5000
+7 - Uses: while, entRef
+while w;
+Select w such that Uses(w, "s7")
+10
+5000
+8 - Uses: while, variable
+while w; variable v;
+Select w such that Uses(w, v)
+10
+5000
+9 - Uses: read, entRef
+read r;
+Select r such that Uses(r, "s3")
+
+5000
+10 - Uses: read, variable
+read r; variable v;
+Select r such that Uses(r, v)
+
+5000
+11 - Uses: print, entRef
+print r;
+Select r such that Uses(r, "s4")
+4
+5000
+12 - Uses: print, variable
+print r; variable s;
+Select r such that Uses(r, s)
+4,7,12
+5000
+13 - Uses: stmt, nonexistent
+stmt stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+14 - Uses: assign, nonexistent
+assign stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+15 - Uses: if, nonexistent
+if stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+16 - Uses: while, nonexistent
+while stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+17 - Uses: print, nonexistent
+print stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+18 - Modifies: read, nonexistent
+read stmt;
+Select stmt such that Uses(stmt, "nonexistent")
+
+5000
+19 - Uses: stmtNum, variable
+variable v;
+Select v such that Uses(2, v)
+apple, juice
+5000
+20 - Uses: while container stmtNum, variable
+variable v;
+Select v such that Uses(10, v)
+s7
+5000
+21 - Uses: if container stmtNum, variable
+variable v;
+Select v such that Uses(5, v)
+a,b,s3,s4,s5,s6,s7,x2,x3
+5000

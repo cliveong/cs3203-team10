@@ -1,0 +1,95 @@
+1 -  While pattern: variable syn
+while w; variable v;
+Select v pattern w(v, _)
+a, b, c, d, e, f, x, y, z
+5000
+2 -  While pattern: _
+while w;
+Select w pattern w(_, _)
+3,8,13,19,21,23,25
+5000
+3 -  While pattern: variable name nested
+while w;
+Select w pattern w("f", _)
+8,13
+5000
+4 -  While pattern: variable name
+while w;
+Select w pattern w("y", _)
+3
+5000
+5 -  While pattern: variable synonym(2nd arg, invalid)
+while w; variable v;
+Select w pattern w(_, v)
+SyntaxError
+5000
+6 -  While pattern: variable name (2nd arg, invalid)
+while w;
+Select w pattern w(_, "a")
+SemanticError
+5000
+7 -  While pattern: variable name (3 args)
+while w;
+Select w pattern w(_, _, _)
+SemanticError
+5000
+8 -  While pattern: variable name (1 arg)
+while w;
+Select w pattern w(_)
+SyntaxError
+5000
+9 - While pattern: variable name triple nested
+while w;
+Select w pattern w("z",_)
+3, 21,23,25
+5000
+10 - While pattern: var-syn tuple
+while W; variable w; constant c;
+Select <W, w> pattern W(w, _) with W.stmt# = c.value
+3 x, 3 y, 3 z
+5000
+11 - While pattern: stmt
+stmt w;
+Select w pattern w(_,_)
+SemanticError
+5000
+12 - While pattern: stmt
+call w;
+Select w pattern w(_,_)
+SemanticError
+5000
+13 - While pattern explicit and
+while w, ww, www;
+Select w pattern w(_,_) and ww("z", _)
+13, 3, 8, 19, 21, 23, 25
+5000
+14 - While pattern implicit and
+while w;
+Select w pattern w(_,_) pattern w("z", _)
+3, 21, 23, 25
+5000
+15 - While pattern not
+while w, ww, www;
+Select w pattern not w(_,_)
+
+5000
+16 - While pattern explicit and not
+while w;
+Select w pattern w(_,_) pattern not w("z", _)
+8, 13, 19
+5000
+17 - While pattern implicit and not
+while w, ww, www;
+Select BOOLEAN pattern not w(_,_) pattern ww("z", _)
+FALSE
+5000
+18 - While pattern: complex conjunction
+while w;
+Select BOOLEAN pattern w("z", _) and not w("a",_) and w(_,_)
+TRUE
+5000
+19 - While pattern: nonexistent attr
+while w;
+Select w.varName pattern w(_,_)
+SemanticError
+5000

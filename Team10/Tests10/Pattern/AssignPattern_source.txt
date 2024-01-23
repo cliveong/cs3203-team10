@@ -1,0 +1,25 @@
+procedure main { z = x + y + z;
+    z1 = 200;
+    while (apple < juice) {
+        if (read != 5) then {
+            sad = (((sad + x) + y) + a) - (z / 2 - (z * 2));
+            read sad;
+        } else { apple = 2023 % 10 * 10;
+            print apple;
+            print = assign + if * call - read + print % while;
+        } a = (2 / 3 / 4 / 5);
+        b = 12345;
+    } if (yes == no) then {
+        c = (((5))) + d / 1;
+        b = (1 * 2 * 3) + (12 % 13 % 14) / a;
+    } else {a = (1 * 2 * 3) + (12 % 13 % 14) / a;
+    }print end;
+    read = yay + end / 2;
+    x = x + y;
+    b = (a * 2 * 3);
+}
+
+procedure complex {
+    s = (aa + bb) * (cc - dd) / (ee * ff) % (gg + hh) + (ii * jj) - (kk / ll) + ((mm * nn) -
+     (o + p)) / ((q - r) * (s + t) / (u % v) * (w + xx) - (yy - zz));
+}

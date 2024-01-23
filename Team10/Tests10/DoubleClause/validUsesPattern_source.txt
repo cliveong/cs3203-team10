@@ -1,0 +1,15 @@
+procedure main {
+    x = 23;
+    y = 15;
+    i = 0;
+    if (x + i >= 2) then {
+        while (i < 10) {
+            x   = x - i;
+        }
+    } else {
+        x = x +   y;
+        y = y + 4;
+        print x;
+    }
+    print y;
+}

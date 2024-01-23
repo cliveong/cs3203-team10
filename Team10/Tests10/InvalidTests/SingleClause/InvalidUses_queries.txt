@@ -1,0 +1,60 @@
+1 - Integer has leading zero
+variable v;
+Select v such that Uses(01, v)
+SyntaxError
+5000
+2 - Invalid read synonym in 1st arg
+read read; variable v;
+Select s such that Uses(read, v)
+SemanticError
+5000
+3 - Invalid integer in 2nd arg
+stmt s;
+Select s such that Uses(s, 10)
+SyntaxError
+5000
+4 - Invalid constant synonym in 2nd arg
+assign a; constant c;
+Select a such that Uses(a, c)
+SemanticError
+5000
+5 - Invalid stmt synonym in 2nd arg
+assign a; stmt s;
+Select a such that Uses(a, s)
+SemanticError
+5000
+6 - Undeclared synonym
+assign a;
+Select a such that Uses(a, v)
+SemanticError
+5000
+7 - Invalid * for Uses
+assign a; variable v;
+Select a such that Uses*(a, v)
+SyntaxError
+5000
+8 - Lower case for Uses
+assign a; variable v;
+Select a such that uses(a, v)
+SyntaxError
+5000
+9 - Lower case for Uses
+assign a; variable v;
+Select a such that uses(a, v)
+SyntaxError
+5000
+10 - Invalid wildcard in arg
+assign a; variable v;
+Select a such that uses(a, _)
+SyntaxError
+5000
+11 - Integer has special char in between
+variable v;
+Select v such that Uses(1$3, v)
+SyntaxError
+5000
+12 - first arg wildcard
+variable v;
+Select v such that Uses(_, v)
+SemanticError
+5000

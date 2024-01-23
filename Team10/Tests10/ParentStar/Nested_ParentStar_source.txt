@@ -1,0 +1,167 @@
+procedure KrabbyKrustyCode {
+    jellyfishNet = 0;
+
+    while (jellyfishNet < 5) {
+        print jellyfishNet;
+        print whoYeeThere;
+        sandyCheeks = 0;
+
+        while (sandyCheeks < 3) {
+            print sandyCheeks;
+                 print crubbycode;
+
+            if (sandyCheeks < 0)  then {
+                bubbleBuddy = 0;
+                print WhyBubbleBuddy;
+
+                while (bubbleBuddy < 2) {
+                    read planktonEvilScheme;
+                    print planktonEvilScheme;
+
+                    if (planktonEvilScheme < 5) then {
+                        spongebobSquarePants = 0;
+
+
+
+
+                        while (spongebobSquarePants < 3) {
+                            print spongebobSquarePants;
+
+                            if (spongebobSquarePants > 2) then {
+                                squidwardTentacles = 0;
+                                a = b + c;
+                                who = ya;
+
+                                while (squidwardTentacles < 2) {
+                                    print squidwardTentacles;
+
+                                    if (squidwardTentacles > 1)  then {
+                                        mrKrabsMoney = 0;
+
+                                        while (mrKrabsMoney < 2) {
+                                            print mrKrabsMoney;
+                                            print blingbling;
+
+                                            planktonEvilPlan = 0;
+
+                                            while (planktonEvilPlan < 2) {
+                                                read BottomOfTheSea;
+                                                print planktonEvilPlan;
+
+                                                if (planktonEvilPlan > 1)  then {
+
+                                                    read patrickStar;
+                                                    print patrickStar;
+                                                    patrickStar = patrickStar + 1 + 2;
+                                                    print ModdedpatrickStar;
+
+
+                                                    if (patrickStar > 10) then {
+                                                        print LardPatrick;
+                                                    } else {
+                                                        print PatrickInputisNotGreaterthanMine;
+                                                    }
+
+                                                    x = 5;
+                                                    y = patrickStar + x;
+                                                    print y;
+                                                } else {
+                                                    print MFDOOM;
+                                                }
+
+                                                planktonEvilPlan = planktonEvilPlan + 1;
+                                            }
+
+                                            mrKrabsMoney = mrKrabsMoney + 1;
+                                        }
+                                    } else {
+
+                                        print SquidwardTentacles;
+
+                                        squidwardMood = Grumpy;
+                                        print squidwardMood;
+                                    }
+
+                                    squidwardTentacles = squidwardTentacles + 1;
+                                }
+                            } else {
+
+                                print SquarePants;
+                                spongebobFeeling = Excited;
+                                print spongebobFeeling;
+                            }
+
+                            spongebobSquarePants = spongebobSquarePants + 1;
+                                                                                                     }
+                    } else {
+                        print PlanktonsEvilScheme;
+                        planktonThoughts = PlanTime;
+                        print planktonThoughts;
+                    }
+                    bubbleBuddy = bubbleBuddy + 1;
+                }
+            } else {
+                print Iteration;
+                if (sandyCheeks < 1 )  then{
+                    print Sandy;
+                } else  {
+                    print Not;
+                    z = 10;
+                    w = z - sandyCheeks;
+                    print Calculating;
+                }
+            }
+            sandyCheeks = sandyCheeks + 1;
+            print girlCrush;
+        }
+
+        jellyfishNet = jellyfishNet + 1;
+        erm = why;
+    }
+}
+
+
+procedure WildWestCode {
+    cowboyHat = Stetson;
+    horse = Buckshot;
+    while (cowboyHat < horse) {
+        print giddyUp;
+        while (spurs > 3) {
+            print bootsMadeForWalkin;
+            loneRanger = 1;
+            if (loneRanger > 1) then {
+                print LoneRangerCore;
+                wantedPoster = 0;
+                while (wantedPoster > 5) {
+                    print AintNoWantedPostersFr;
+                    showdown = true;
+                    if (showdown < 3) then {
+                        print HighNoonToTheMoon;
+                        duelCountdown = 3;
+                        while (duelCountdown > 0) {
+                            print duelCountdown;
+                            duelCountdown = duelCountdown - 1;
+                        }
+                        print Draw;
+                    } else {
+                        print NoShowdown;
+                        print yuh;
+                    }
+
+                    wantedPoster = true;
+                    }
+            } else {
+                print AntiLoneRanger;
+            }
+
+            spurs = Silent;
+        }
+
+        cowboyHat = TenGallon;
+    }
+
+    print GoodbyeWildWest;
+    print orphan1;
+    print orphan2;
+    print orphan3;
+}

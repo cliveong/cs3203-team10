@@ -1,0 +1,93 @@
+procedure first { x = 5;
+if (x > 3) then {
+        while (x > 0) {
+            if (x < 7) then {
+                z = x + 1;
+                while (z > 0) {
+                    print z;
+                    z = z - 1;
+                }x = x - 1;
+            }else { x = x - 2;
+            }print x;}
+    }else {z = x - 1;
+        while (z > 0) {
+            print z;
+            z = z - 1;}
+    } a = x * z;}
+procedure second {y = 8;
+    while (y > 0) {
+        if (y % 2 == 0) then {
+            x = x + 2;
+            y = y / 2;
+            call first;
+        }else {x = x * 3;
+            y = y - 1;}
+    }b = x - y;}
+procedure third {a = 1 -r;
+    while ((c > 1) && (d != 2)) {
+        e = m + n -3;
+        read f;
+        if (f > 1) then {
+            g = a * 3 - 2;
+            if (h < 10) then {
+                i = a + b;
+                call second;
+                j = g;
+                while (j > 1) {
+                    print j;
+                    j = j - 1;
+                }print j;
+                while (b < c) {
+                    v = (x + 3) - 3;
+                } if (c == 1) then {
+                    print c;
+                } else { print i;
+                    c = 1;}
+                i = c - v + 3;} else {
+                    print smth;}
+            read k;
+            while ((k - 10 * 9 % 11) < 11) {
+                l = m + 1 + c;
+                while (!(m == 3)) {
+                    if (10 * n != o) then {
+                        p = q + 3;
+                    } else { r = a + b + m + n - 9;
+                    }read s;
+                    call second;
+                    t = u * 18;}
+                read v;
+                print w;
+                if (w < v) then {
+                    while (w < v) {
+                        read w;
+                    }} else {read v;}}
+            read x;
+            y = z - x;
+        } else {while (o >= 102) {
+                p = r + 10;
+                q = q + a + q * q * a;
+                if (s > d) then {
+                    print t;
+                    u = 1234567;
+                } else {
+                    print v;
+                    print i;
+                    read w;
+                    read i;
+                }v = i;}
+            print i;}
+        read d;
+        print d;
+        while (x ==3) {
+            print l;}
+    }while (x <= f) {
+        x = x + 1;
+        call second;
+    } x = a * b + c;
+    if (x < d) then {
+        x = d;
+    } else {x = e;}
+    print f;
+    x = 1 + f -g;
+    b = 2;
+}

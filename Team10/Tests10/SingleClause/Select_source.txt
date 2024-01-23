@@ -1,0 +1,22 @@
+procedure main {
+  while (a == 0) {
+		if    (a == 1) then{
+
+
+		print zzz;
+
+
+		}       else {
+	while (while > 0) {
+						if (if > then) then {
+							while (3 < a ) {
+								a = 1;
+							}
+							read rrr;
+						} else {
+						t = 322303;
+						}
+	}
+		}
+  }
+}

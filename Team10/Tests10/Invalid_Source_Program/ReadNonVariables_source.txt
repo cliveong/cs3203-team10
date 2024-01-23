@@ -1,0 +1,1 @@
+procedure main { read 0; }

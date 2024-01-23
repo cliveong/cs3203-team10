@@ -1,0 +1,1 @@
+procedure main { print x;} procedure main {read y;}

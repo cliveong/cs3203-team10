@@ -1,0 +1,27 @@
+procedure main {
+    i = 0;
+    x = i;
+    y = 10;
+    z = 15;
+    while (i < 10) {
+        x = x + y;
+        i = i + 1;
+    }
+    if (y > 50) then {
+        y = y - z;
+    } else {
+        y = y + z;
+    }
+    print x;
+    print y;
+    read i;
+    read z;
+    if ((y>10)) then {
+        ntg = 10;
+        while (ntg >= 10) {
+            ntg = ntg + 1;
+        }
+    } else {
+        ntg = 10;
+    }
+}

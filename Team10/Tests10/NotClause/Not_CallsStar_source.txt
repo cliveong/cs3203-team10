@@ -1,0 +1,163 @@
+procedure a
+ {
+	call b;
+call c;	
+}
+procedure b
+ {
+	call d;	
+call e		
+;
+}
+procedure c
+ {
+	call f;	
+while  (((((((x+  1)*w)))-   22222) ==   w) && (callcall == a)) {call  g;}
+}
+procedure d
+ {
+print a;
+read call;
+	call h;
+if (if == else) then {
+
+
+call 			i	;}	else {hi = bye;}
+
+
+
+
+
+
+}
+procedure e
+ {
+	call		 j;
+call 	k	;	
+}
+procedure f
+ {
+	call
+	 l;	
+}
+procedure g
+ {
+	call 		m;	
+}
+procedure h
+ {
+	call   =	 call;
+}
+procedure i
+ {
+	call 	t;	
+}
+procedure j
+ {
+	call = 
+call;	
+}
+procedure k
+ {
+	call 
+s;	
+}
+procedure l
+ {
+	call 
+n;	
+}
+procedure m
+ {
+	call
+
+ o;	
+}
+procedure n
+ {
+	call 
+
+p
+
+;	
+}
+procedure o
+ {
+	call 
+q
+
+
+;	
+}
+procedure p
+ {
+	call 
+o
+;	
+}
+procedure q
+ {
+	call 
+r
+;	
+}
+procedure r
+ {
+	
+call 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s;	
+call 		z	
+
+
+
+	;
+}
+procedure s
+ {
+	call j;	
+}
+procedure t
+ {
+	call u;	
+}
+procedure u
+ {
+	call v;	
+}
+procedure v
+ {
+	call w;
+call x;	
+}
+procedure w
+ {
+	call x;	
+}
+procedure x
+ {
+	call y;	
+}
+procedure y
+ {
+	call z;call s;	
+}
+procedure z
+ {
+	print call;
+read call;
+call = call * call2;	
+}

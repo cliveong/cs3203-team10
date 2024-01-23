@@ -1,0 +1,50 @@
+1 - Boolean true
+
+Select BOOLEAN such that Next(1,2)
+TRUE
+5000
+2 - Boolean false not direct next
+
+Select BOOLEAN such that Next(1,3)
+FALSE
+5000
+3 - Boolean false different procedure
+
+Select BOOLEAN such that Next(5,6)
+FALSE
+5000
+4 - Next with one synonym first arg
+stmt s;
+Select s such that Next(s,7)
+6
+5000
+5 - Next with one synonym second arg
+stmt s;
+Select s such that Next(2,s)
+3
+5000
+6 - No next value
+stmt s;
+Select s such  that Next    (8,s)
+
+5000
+7 - All next relations 
+stmt s, s1;
+Select <s, s1> such that Next(s,s1)
+1 2, 2 3, 3 4, 4 5, 6 7, 7 8
+5000
+8 - Next with two synonyms
+print pn; assign a;
+Select a such that Next(pn,     a   )
+3, 7
+5000
+9 - Invalid query string as argument
+stmt s;
+Select s such that Next(s,"second")
+SyntaxError
+5000
+10 - Invalid query two numbers in arg
+stmt s;
+Select s such that Next(s, 3 4)
+SyntaxError
+5000

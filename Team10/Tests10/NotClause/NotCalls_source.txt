@@ -1,0 +1,47 @@
+procedure proc1 {
+	call        proc5;
+	call proc3;
+}
+
+procedure proc2 {
+	call proc3;
+	call        proc4;
+}
+
+procedure proc3 {
+	proc5 = 6;
+}
+
+procedure proc4 {
+	call proc6;
+
+
+	call proc5;
+}
+
+procedure proc5 {
+	call proc6;
+}
+
+procedure proc6 {
+	proc5 =            7 +        8 - 9;
+}
+
+procedure proc7 {
+    if (i == a + b - (j /   proc1)) then {
+        while (k < 98 + 51       ) {
+            call proc6;
+
+            if (a <= (9 - kk)) then {
+                call proc1;
+            } else {
+                call proc1;
+            }
+
+        }
+    }     else {
+            i = k + 123;
+        }
+
+
+}

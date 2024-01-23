@@ -1,0 +1,50 @@
+procedure first {
+   x = 5 * 2;
+   print m;
+   read smth;
+   g = m;
+   if (x == 2) then {
+	  read p;
+	  c = g + f;
+   } else {
+	  print j;
+	  call second;
+	  x = g + f + 5 * 2;
+   }
+   while (m == 2) {
+	   read do;
+	   print si;
+	   v = l - q + g + f % 10 + 5;
+	   print eg;
+   }
+
+   b =  l- q + 7 + g + f;
+   call second;
+
+   if (y == 2) then {
+		g = g + f ;
+		print m;
+   } else {
+		b = l + l / 2 + 5 *2;
+   }
+}
+
+procedure second {
+	if (x == 2) then {
+	  h = g + f + 6 + 5 * 2 - f;
+	  read sl;
+	  read f;
+   } else {
+	  print m;
+	  x = 1 + 2 -g;
+
+   }
+
+   read smth;
+   print smth;
+   while (v < 2) {
+	  print m;
+	  f = g + h;
+	  f = t - f + l;
+   }
+}

@@ -1,0 +1,75 @@
+procedure main {
+    while (x < 10) {                     
+        read x;                          
+        while (y != z) {                
+            print y;                     
+            print procedureA;             
+            x = x + 1;                   
+            while ((x >= 5) && (y <= 3)) {
+                while (a == b) {         
+                    print procedureB;      
+                    while (!(x > z)) {    
+                        while ((c < d) || (e > f)) { 
+                            if ((g <= h) && (i >= j)) then { 
+                                while (k == l) { 
+                                    while (m != n) {
+                                        if ((o > p) || (q < r)) then {
+                                            z = z + 1;
+                                            while (s >= t) {
+                                                if (u != v) then {
+                                                    a = a - 1;
+                                                    b = b * 2; 
+                                                    if (w <= x) then {
+                                                        while (y > z) {
+                                                            c = c / 2; 
+                                                            if (a != b) then {
+                                                                d = d % 3; 
+                                                                if (c < d) then {
+                                                                    if (e >= f) then {
+                                                                        while (g != h) {
+                                                                            if (i < j) then {
+                                                                                if (k <= l) then {
+                                                                                    if (m > n) then {
+                                                                                        e = e + f; 
+                                                                                    } else {
+                                                                                        read g;
+                                                                                    }
+                                                                                } else {
+                                                                                    h = i + j; 
+                                                                                }
+                                                                            } else {
+                                                                                print k; 
+                                                                            }
+                                                                        }
+                                                                    } else {
+                                                                        print procedureC; 
+                                                                    }
+                                                                } else {
+                                                                    l = m - n;
+                                                                }
+                                                            } else {
+                                                                print o;
+                                                            }
+                                                        }
+                                                    } else {
+                                                        read p;
+                                                    }
+                                                } else {
+                                                    q = r * s;
+                                                }
+                                            }
+                                        } else {
+                                            print procedureD; 
+                                        }
+                                    }
+                                }
+                            } else {
+                                t = u / v;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

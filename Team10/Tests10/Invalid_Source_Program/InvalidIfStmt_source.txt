@@ -1,0 +1,1 @@
+procedure main { if(y==3) {print x;} else {read x;}}

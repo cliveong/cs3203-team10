@@ -1,0 +1,65 @@
+1 - Follows with one argument
+stmt s; assign a;
+Select s such that Follows(s) pattern a (_,_)
+SyntaxError
+5000
+2 - Follows with missing first argument
+stmt s1; assign a;
+Select s1 such that Follows(, s1) pattern a (_,_)
+SyntaxError
+5000
+3 - Follows with missing second argument
+stmt s; assign a;
+Select s such that Follows(s, ) pattern a (_,_)
+SyntaxError
+5000
+4 - Follows with 2 missing arguments
+stmt s; assign a;
+Select s such that Follows() pattern a (_,_)
+SyntaxError
+5000
+5 - Follows with 3 arguments
+stmt s, s1, s2; assign a;
+Select s such that Follows(s, s1, s2) pattern a (_,_)
+SyntaxError
+5000
+6 - Follows with first argument mismatched type
+stmt s; constant c; assign a;
+Select s such that Follows(c, s) pattern a (_,_)
+SemanticError
+5000
+7 - Follows with second argument mismatched type
+stmt s; constant c; assign a;
+Select s such that Follows(s, c) pattern a (_,_)
+SemanticError
+5000
+8 - Follows with first argument undeclared
+stmt s1; assign a;
+Select s1 such that Follows(s, s1) pattern a (_,_)
+SemanticError
+5000
+9 - Follows with second argument undeclared
+assign a, a1;
+Select a such that Follows(a, s) pattern a1 (_,_)
+SemanticError
+5000
+10 - Follows with first argument string
+stmt s; assign a;
+Select s such that Follows("s", s) pattern a (_,_)
+SyntaxError
+5000
+11 - Follows with second argument string
+stmt s; assign a;
+Select s such that Follows(s) pattern a (_,_)
+SyntaxError
+5000
+12 - Follows with first argument variable
+stmt s; variable v; assign a;
+Select s such that Follows(v, s) pattern a (_,_)
+SemanticError
+5000
+13 - Follows with second argument variable
+assign a; variable v; assign a;
+Select a such that Follows(a, v) pattern a (_,_)
+SemanticError
+5000

@@ -1,0 +1,90 @@
+1 - Select with undeclared synonym
+stmt s;
+Select w
+SemanticError
+5000
+2 - Select number
+stmt s;
+Select 5
+SyntaxError
+5000
+3 - Select string
+assign a;
+Select "a"
+SyntaxError
+5000
+4 - Lowercase select
+assign a;
+select a
+SyntaxError
+5000
+5 - Semicolon after Select
+assign a;
+Select a;
+SyntaxError
+5000
+6 - Missing Synonym
+assign a;
+Select
+SyntaxError
+5000
+7 - Extra Synonym
+assign a, a1;
+Select a a1
+SyntaxError
+5000
+8 - Invalid spelling of Select
+stmt s;
+Sel@ct s
+SyntaxError
+5000
+9 - Missing Select Keyword
+assign a;
+sdfsfs
+SyntaxError
+5000
+10 - Select assign
+assign a;
+Select a
+7,9
+5000
+11 - Select Variables
+variable v;
+Select v
+a, zzz, while, if, then, rrr, t
+5000
+12 - Select While
+while w;
+Select w
+1, 4, 6
+5000
+13 - Select Ifs
+if ifs;
+Select ifs
+2, 5
+5000
+14 - Select stmt
+stmt s;
+Select s
+1, 2, 3,4,5,6,7,8,9
+5000
+15 - Select constants
+constant c;
+Select c
+0, 1, 3, 322303
+5000
+16 - Select Procedures
+procedure p;
+Select p
+main
+5000
+17 - Select read
+read r;
+Select r
+8
+5000
+18 - select print
+print p;
+Select p
+3
+5000

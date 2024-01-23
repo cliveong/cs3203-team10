@@ -1,0 +1,31 @@
+procedure PatternIf {read x;
+    print y;
+    while (z - y != x ) {
+        read x;}
+    if (x == y - (c % 3 / 3 + 1)) then {
+        y = y - 100 + 120 - b;
+    } else {print k;
+    }while ((e >= f + 1) || (a % b < c - d)) {
+        print e;
+        if ((x + f / z) == f) then {
+            read f;
+        } else {print d;
+        }while (f != 2) {
+            a = b;}
+    }if (y <= z / 1) then {
+        if (b <= y * z) then {
+            b = z + 2;
+        } else {read b;
+        }while (b < 3 + 5) {
+            read a;}
+    } else {while (c == (z / a + b)) {
+            read c;
+            while(z==5) {
+                read y;
+                while (z < z) {
+                    print y;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,175 @@
+1 - BOOLEAN calls, no declaration, wildcard-wildcard
+
+Select BOOLEAN such that Calls(_, _)
+TRUE
+5000
+2 - proc call all other proc, syn-syn
+procedure p1, p2;
+Select p1 such that Calls   (p1,    p2)
+proc1, proc2, proc4, proc5, proc7
+5000
+3 - proc called by other proc, wildcard-syn
+procedure p1;
+Select    p1 such  that Calls(_, p1)
+proc1, proc3, proc4, proc5, proc6
+5000
+4 - specific proc call all other proc, attribute
+procedure p1;
+Select p1.    procName such that Calls("proc1", p1)
+proc3, proc5
+5000
+5 - specific proc called by all other proc, attribute, tuple
+procedure p1;
+Select <p1.procName     > such that Calls(p1, "    proc6")
+proc4, proc5, proc7
+5000
+6 - specific proc call another specific proc
+
+Select BOOLEAN such that Calls("proc5", "    proc6")
+TRUE
+5000
+7 - select proc calls other proc and proc that does not call other proc, tuple
+procedure p1, p2;
+Select <   p1, p2> such that Calls(     p1, _) and not Calls(p2, _)
+proc1 proc3, proc1 proc6, proc2 proc3, proc2 proc6, proc4 proc3, proc4 proc6, proc5 proc3, proc5 proc6, proc7 proc3, proc7 proc6
+5000
+8 - proc uses var with same name as other proc, but does not call it
+
+Select BOOLEAN such that Calls("proc6   ", _  )
+FALSE
+5000
+9 - proc synonym name is BOOLEAN
+procedure BOOLEAN;
+Select BOOLEAN such that      Calls(BOOLEAN, _)
+proc1, proc2, proc4, proc5, proc7
+5000
+10 - proc name not in program
+procedure p;
+Select          p such that Calls(p, "   sdsdkjh   ")
+
+5000
+11 - select proc not in clause
+procedure p, p1;
+Select <p, p1> such that Calls(  p, "proc4")
+proc2 proc1, proc2 proc2, proc2 proc3, proc2 proc4, proc2 proc5, proc2 proc6, proc2 proc7
+5000
+12 - multi clause, explicit and, attribute
+procedure p, p1;
+Select <p, p1    .procName> such that Calls(p, "proc3") and Calls(p1, "proc1")
+proc1 proc7, proc2 proc7
+5000
+13 - multi clause, implicit and
+procedure p, p1;
+Select <p, p1> such that Calls(p, "proc5") such that Calls("proc5", p1)
+proc1 proc6, proc4 proc6
+5000
+14 - multi clause, Modifies and with
+procedure p, q; assign a; variable v;
+Select p such that Calls(p, q) and Modifies(   a, v) with p.procName =   v.varName
+proc5
+5000
+15 - multi clause, if-pattern, Uses and with
+procedure p, q; if if; variable v;
+Select <p,    v.varName> such that Calls(p, q) and Uses(p, v) pattern if(v, _, _)  with     q.procName = v.varName
+proc7 proc1
+5000
+16 - calls clause spelt wrongly
+procedure p;
+Select      p such that Call(p, _)
+SyntaxError
+5000
+17 - missing open parenthesis
+procedure p;
+Select p such that Calls   p, _)
+SyntaxError
+5000
+18 - missing first argument
+procedure p;
+Select p such that Calls (  , _)
+SyntaxError
+5000
+19 - missing comma
+procedure p;
+Select p such that Calls ( p  q)
+SyntaxError
+5000
+20 - missing second argument
+procedure p;
+Select p such that Calls ( _ , )
+SyntaxError
+5000
+21 - missing close parenthesis
+procedure p;
+Select p such that Calls (    _ , p
+SyntaxError
+5000
+22 - space in argument
+procedure proc1;
+Select p such that Calls ( p r o c , _)
+SyntaxError
+5000
+23 - space in argument
+procedure proc1;
+Select p such that Calls (" p r o c " , _)
+SyntaxError
+5000
+24 - integer in argument
+procedure proc1;
+Select p such that Calls (_ , 10)
+SyntaxError
+5000
+25 - variable synonym in Calls
+variable proc;
+Select p such that Calls (proc , _)
+SemanticError
+5000
+26 - statement synonym in Calls
+stmt proc;
+Select p such that Calls (proc , _)
+SemanticError
+5000
+27 - missing and in multi-clause
+procedure p, q;
+Select p such that Calls (p , q) Calls(_, q)
+SyntaxError
+5000
+28 - empty string
+procedure p, q;
+Select p such that Calls ("" , q)
+SyntaxError
+5000
+29 - string missing inverted comma
+procedure p, q;
+Select p such that Calls ("proc , q)
+SyntaxError
+5000
+30 - multi clause explicit and, clause missing
+procedure p, q;
+Select p such that Calls (p , q) and
+SyntaxError
+5000
+31 - select attribute missing attribute name
+procedure p, q;
+Select p. such that Calls (p , q)
+SyntaxError
+5000
+32 - select attribute missing synonym
+procedure p, q;
+Select .procName such that Calls (p , q)
+SyntaxError
+5000
+33 - select proc.value
+procedure p, q;
+Select p.value such that Calls (p , q)
+SemanticError
+5000
+34 - select proc.varName
+procedure p, q;
+Select p.varName such that Calls (p , q)
+SemanticError
+5000
+35 - select proc.varName
+procedure p, q;
+Select p.stmt# such that Calls (p , q)
+SemanticError
+5000

@@ -1,0 +1,150 @@
+1 - Parent*: stmt, read
+stmt s; read r;
+Select s such that Parent*(s, r)
+3,5,9,12,14,19
+5000
+2 - Parent*: stmt, assign
+stmt s; assign a;
+Select s such that Parent*(s, a)
+3, 5, 9, 12, 14, 19, 21
+5000
+3 - Parent*: stmt, print
+stmt s; print p;
+Select s such that Parent*(s, p)
+3,5,9
+5000
+4 - Parent*: stmt, while
+stmt s; while w;
+Select s such that Parent*(s, w)
+3,5,9
+5000
+5 - Parent*: stmt, if
+stmt s; if ifs;
+Select s such that Parent*(s, ifs)
+3, 5, 9, 12, 19
+5000
+6 - Parent*: stmt, stmt num with result
+stmt s;
+Select s such that Parent*(s, 10)
+3,5,9
+5000
+7 - Parent*: stmt, stmt no result
+stmt s;
+Select s such that Parent*(s, 3)
+
+5000
+8 - Parent*: stmt, stmt same stmt no result
+stmt ss;
+Select s such that Parent*(ss, ss)
+SemanticError
+5000
+9 - Parent*: if, if
+if i; if i1;
+Select i such that Parent*(i, i1)
+5, 9
+5000
+10 - Parent*: if, read
+if ifs; read r;
+Select ifs such that Parent*(ifs, r)
+5, 9, 14
+5000
+11 - Parent*: if, print
+if ifs; print p;
+Select ifs such that Parent*(ifs, p)
+5,9
+5000
+12 - Parent*: if, assign
+if ifs; assign a;
+Select ifs such that Parent*(ifs, a)
+5, 9, 14, 21
+5000
+13 - Parent*: if, while
+if ifs; while w;
+Select ifs such that Parent*(ifs, w)
+5, 9
+5000
+14 - Parent*: if, stmt num with result
+if ifs;
+Select ifs such that Parent*(ifs, 23)
+21
+5000
+15 - Parent*: if, stmt number no result
+if ifs;
+Select ifs such that Parent*(ifs, 1)
+
+5000
+16 - Parent*: while, while
+while w; while w1;
+Select w such that Parent*(w, w1)
+3
+5000
+17 - Parent*: while, read
+while w; read r;
+Select w such that Parent*(w, r)
+3,12,19
+5000
+18 - Parent*: while, print
+while w; print p;
+Select w such that Parent*(w, p)
+3
+5000
+19 - Parent*: while, assign
+while w; assign a;
+Select w such that Parent*(w, a)
+3, 12, 19
+5000
+20 - Parent*: while, if
+while w; if ifs;
+Select w such that Parent*(w, ifs)
+3, 12, 19
+5000
+21 - Parent*: while, stmt num true
+while w;
+Select w such that Parent*(w, 4)
+3
+5000
+22 - Parent*: while, stmt number no result
+while w;
+Select w such that Parent*(w, 1)
+
+5000
+23 - Parent*: stmt number, stmt
+stmt s;
+Select s such that Parent*(5, s)
+6, 7, 8, 9,10,11,12,13,14,15,16,17, 18
+5000
+24 - Parent*: stmt number, read
+read r;
+Select r such that Parent*(14, r)
+16
+5000
+25 - Parent*: stmt number, print
+print p;
+Select p such that Parent*(3, p)
+8,11,18,25
+5000
+26 - Parent*: stmt number, assign
+assign a;
+Select a such that Parent*(5, a)
+6,13,15,17
+5000
+27 - Parent*: stmt number, if
+if ifs;
+Select ifs such that Parent*(3, ifs)
+5,9,14,21
+5000
+28 - Parent*: stmt number, while
+while w;
+Select w such that Parent*(9, w)
+12
+5000
+29 - Parent*: stmt number, stmt number true
+constant c;
+Select c such that Parent*(5, 6)
+0,1,2,3,4,10,300,998,9876543
+5000
+30 - Parent*: stmt number, stmt number false no result
+constant c;
+Select c such that Parent*(1, 2)
+
+5000

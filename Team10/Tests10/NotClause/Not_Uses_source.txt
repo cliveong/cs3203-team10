@@ -1,0 +1,81 @@
+procedure a {
+    print x;
+   print y;
+    print z;
+	read x;
+    read y;
+    read z;
+    x = x + 1;
+	y = y + 2;
+    z = x * y + z / x - y % (((((((((((((((((((((a+b)))))))))))))))))))));
+	while (!((a > b) )) {
+		while (!((a > b) )) {
+			if ((a >= b) && (b >= c)) then {
+				read a;
+			} else {
+				z = abc + 123;
+				z = abc + 123 + z;
+	}
+			if ((a >= b) && (b >= c22)) then {
+				x = abc + 123;
+				x = abc + 123 + z;
+			} else {
+				y = abc + 123;
+				y = abc + 123 + z;
+			}
+		}
+		while (!((a > b) )) {
+			if ((a >= basdas) && (asdb >= c21)) then {
+				read a;
+				read b;
+			} else {
+				print a;
+				print b;
+			}
+			if ((a >= b) && (7 <= 110)) then {
+				print a;
+			} else {
+				print aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123abc;
+				call b;
+				print aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123;
+			}
+		}
+	}
+}
+procedure b {
+ aa = bb * cc / dd;
+ call c;
+
+}
+
+procedure c {
+ zz = 3 * tt + ee;
+ while (x == (2*3)){
+ rr = zz;
+	call d;}
+}
+
+procedure d {
+	if (3 == tty) then {
+	call e;
+	}else{ ttt = 434 + pop-popi;}
+}
+procedure e {
+	call f;
+	while (a == b){
+	if (xx==yy) then{
+	call g;}else{
+	kk= ll/3+4;}}
+}
+procedure f {
+	read f;
+	if (press!=f)then{
+	press=f;}else{call g;}
+	qwertyuiop = qwertyuiopqwertyuiop;
+}
+procedure g {
+	do=nothing;
+	if (end==source)then{
+	finish = read;} else {
+	print dead;}
+}

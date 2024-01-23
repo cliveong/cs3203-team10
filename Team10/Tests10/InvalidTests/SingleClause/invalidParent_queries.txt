@@ -1,0 +1,85 @@
+1 - Invalid string in 1st arg
+stmt s;
+Select s such that Parent(s, "x")
+SyntaxError
+5000
+2 - Invalid string in 2nd arg
+stmt s;
+Select s such that Parent*("x", s)
+SyntaxError
+5000
+3 - Invalid variable synonym in 1st arg
+stmt s; variable x;
+Select x such that Parent*(x, s)
+SemanticError
+5000
+4 - Invalid variable synonym in 2nd arg
+stmt s; variable x;
+Select s such that Parent(s, x)
+SemanticError
+5000
+5 - Invalid constant synonym in 2nd arg
+stmt s; constant x;
+Select s such that Parent(s, x)
+SemanticError
+5000
+6 - Invalid procedure synonym in 1st arg
+procedure p; stmt s;
+Select s such that Parent*(p, x)
+SemanticError
+5000
+7 - Invalid integer in 1st arg
+stmt s;
+Select s such that Parent(01, s)
+SyntaxError
+5000
+8 - Invalid integer in 2nd arg
+stmt s;
+Select s such that Parent(s, 019)
+SyntaxError
+5000
+9 - Extra char in argument (special char in PQL)
+stmt s;
+Select s such that Parent*(s, _1)
+SyntaxError
+5000
+10 - Extra char in argument (special char not in PQL)
+stmt s;
+Select s such that Parent(*10_2, s)
+SyntaxError
+5000
+11 - 3 arguments
+stmt s, s1, s2;
+Select s such that Parent(s, s1, s2)
+SyntaxError
+5000
+12 - Missing bracket
+stmt s, s1;
+Select s such that Parent*(s, s1
+SyntaxError
+5000
+13 - Missing comma
+stmt s, s1;
+Select s such that Parent(s s1)
+SyntaxError
+5000
+14 - Lower case Parent
+stmt s, s1;
+Select s such that parent(s, s1)
+SyntaxError
+5000
+15 - Undeclared synonym
+stmt s;
+Select s such that Parent*(s, s1)
+SemanticError
+5000
+16 - Extra semicolon
+stmt s;
+Select s such that Parent(s, s1);
+SyntaxError
+5000
+17 - Missing such that
+stmt s, s1;
+Select s Parent(s, s1)
+SyntaxError
+5000

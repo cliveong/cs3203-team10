@@ -1,0 +1,61 @@
+procedure main {
+    read x;
+    if (x > 0) then {
+        while (x < 100) {
+            result = (a + b) * c - (d + e) / f;
+            if (x % 2 == 0) then {
+                x = x * 2 - 1;
+                while ((e >= f + 1) || (a % b < c - d)) {
+                    result
+                     =
+                     a
+                     *
+                     (b
+                      +
+                      c -
+                       d)
+                       + e
+                        /
+                        f;
+                    if (3 % 3 == 0) then {
+                        x = x / 3;
+                        while (2 < 30) {
+                            if ( (a % b < c - d)) then {
+                                x = x + 10;
+                                while (x < 80) {
+                                    if (x % 7 == 0) then {
+                                        x = x * 2;
+                                        result = a + b - (c * d + e) % f ;
+                                    } else {
+                                        x = x - 5;
+                                    }
+                                }
+                            } else {
+                                print blah;
+                            }
+                        }
+                    } else {
+                        x = x + 2;
+                        result = (a - b + c) * (d % e) + f;
+                    }
+                }
+            } else {
+                x = x + 5;
+            }
+        }
+    } else {
+        x = x - 10;
+    }
+    result =
+    (a + b) /
+    (c - d) * e
+    - (f %
+    g)
+
+
+
+
+    ;
+    print s;
+    result = psyche;
+}

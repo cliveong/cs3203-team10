@@ -1,0 +1,1 @@
+procedure main { while (y==3 {print x;} } 

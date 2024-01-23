@@ -1,0 +1,45 @@
+1 - Invalid first argument
+assign a; stmt s;
+Select a pattern a(s, _)
+SemanticError
+5000
+2 - Missing first argument
+assign a;
+Select a pattern a(, _)
+SyntaxError
+5000
+3 - Invalid partial match
+assign a; variable v;
+Select a pattern a(v, _"x^5+9%"_)
+SyntaxError
+5000
+4 - Partial match missing wildcard
+assign a; variable v;
+Select a pattern a(v, _"(a+b) * (c/d)")
+SyntaxError
+5000
+5 - Partial match with invalid brackets
+assign a; variable v;
+Select a pattern a(v, _"((x+y*a)"_)
+SyntaxError
+5000
+6 - Invalid exact match
+assign a; variable v;
+Select a pattern a(v, "x#@+y*a")
+SyntaxError
+5000
+7 - Exact match with invalid brackets
+assign a; variable v;
+Select a pattern a(v, "((x+y%)7*9)")
+SyntaxError
+5000
+8- Invalid brackets
+assign a; variable v;
+Select a pattern a(v, "((x+y%x)(7)*9)")
+SyntaxError
+5000
+9- Invalid multiple brackets
+assign a; variable v;
+Select a pattern a(v, _"(()())"_)
+SyntaxError
+5000

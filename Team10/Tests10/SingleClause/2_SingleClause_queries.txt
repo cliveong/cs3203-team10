@@ -1,0 +1,155 @@
+1 - all variables
+variable a;
+Select a
+a,aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123,aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123abc,abc,asdb,b,basdas,c,c21,c22,x,y,z
+5000
+2 - all stmts
+stmt a;
+Select a
+1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,4,5,6,7,8,9
+5000
+3 - all ifs
+if ifs;
+Select ifs
+12,16,22,27
+5000
+4 - all whiles
+while w;
+Select w
+10,11,21
+5000
+5 - all assigns
+assign a;
+Select a
+14,15,17,18,19,20,7,8,9
+5000
+6 - all constants
+constant c;
+Select c
+1,110,123,2,7
+5000
+7 - all read
+read r;
+Select r
+13,23,24,4,5,6
+5000
+8 - all print
+print pn;
+Select pn
+1,2,25,26,28,29,3,30
+5000
+9 - same stmt list
+stmt s;
+Select s such that Follows(s,3)
+2
+5000
+10 - immediately after while loop
+assign a;
+Select a such that Follows(5, a)
+
+5000
+11 - immediately before while loop
+stmt s;
+Select s such that Follows(4, s)
+5
+5000
+12 - follows*
+stmt s;
+Select s such that Follows*(4, s)
+10,5,6,7,8,9
+5000
+13 - parent
+stmt s;
+Select s such that Parent(s,6)
+
+5000
+14 - parent no result
+stmt s;
+Select s such that Parent(s,8)
+
+5000
+15 - parent*
+stmt s;
+Select s such that Parent*(s,6)
+
+5000
+16 - uses
+variable v; stmt s;
+Select s such that Uses(s, v)
+1,10,11,12,14,15,16,17,18,19,2,20,21,22,25,26,27,28,29,3,30,7,8,9
+5000
+17 - uses while with string x
+while w;
+Select w such that Uses(w, "i")
+
+5000
+18 - uses while 2 synonyms
+while w; variable v;
+Select w such that Uses(w, v)
+10,11,21
+5000
+19 - assignments within while loop
+assign a; while w;
+Select a such that Parent* (w, a)
+14,15,17,18,19,20
+5000
+20 - var used by 6
+variable v;
+Select v such that Uses (6, v)
+
+5000
+21 - uses if with string
+if ifs; variable v;
+Select ifs such that Uses(ifs, v)
+12,16,22,27
+5000
+22 - uses if with string x
+if ifs; variable v;
+Select ifs such that Modifies(ifs, "y")
+16
+5000
+23 - uses if with string
+if ifs; variable v;
+Select v such that Modifies(ifs, v)
+a,b,x,y,z
+5000
+24 - pattern
+assign A; variable b;
+Select b pattern A(b, _"y"_)
+y,z
+5000
+25 - pattern
+assign A; variable Bb;
+Select Bb pattern A("x", _)
+a,aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123,aaaaaaaaaaaaaaaabbbbbbbbbbbbbbcccccccc123abc,abc,asdb,b,basdas,c,c21,c22,x,y,z
+5000
+26 - pattern nonexistent
+assign A; variable Bb;
+Select Bb pattern A("x", _"k"_)
+
+5000
+27 - all read stmt
+assign A; read Bb;
+Select Bb pattern A("x", _)
+13,23,24,4,5,6
+5000
+28 - all stmt with x on lhs
+assign A; stmt Bb;
+Select A pattern A("x", _)
+17,18,7
+5000
+29 - all assign with y on both sides
+assign HEY;
+Select HEY pattern HEY("y", _"y"_)
+8
+5000
+30 - all assign with y on both sides
+assign HEY, Hey; variable grr;
+Select grr pattern Hey(grr, _"10"_)
+
+5000
+31 - variables in loop
+variable v; stmt k; if ifs;
+Select ifs such that Modifies(ifs, "ntg")
+
+5000

@@ -1,0 +1,135 @@
+1 - 
+while w; if i; stmt s; assign a;
+Select a such that Affects(4, 10) pattern a("Anya", _)
+1, 8, 18, 21, 23, 26
+5000
+2 - 
+while w; if i; stmt s1, s2; assign a;
+Select <s1, a> such that Affects(s1, 12) pattern a("Anya", _"Anya"_)
+1 8, 1 26, 6 8, 6 26, 8 8, 8 26
+5000
+3 - 
+while w; if i; stmt s1, s2; assign a;
+Select <a> such that Affects(_, 9) pattern a("x", _"y + 2"_)
+
+5000
+4 - 
+while w; if i; stmt s1, s2; assign a;
+Select <i, a> such that Affects(4, a) pattern a(_,_)
+7 10, 16 10, 20 10, 30 10
+5000
+5 - 
+while w; if i; stmt s1, s2; assign a;
+Select <s1, a> such that Affects(a, s1) pattern a(_, _"Anya+Loid"_)
+27 26
+5000
+6 - 
+while w; if i; stmt s1, s2; assign a;
+Select <a> such that Affects(_, a) pattern a(_, "y*Becky")
+
+5000
+7 - 
+while w; if i; stmt s1, s2; assign a; variable v;
+Select v such that Affects(10, _) pattern a(v,_)
+Anya,Becky,Fiona,Loid
+5000
+8 - 
+while w; if i; stmt s1, s2; assign a; variable v;
+Select BOOLEAN such that Affects(a, _) pattern a(v,_"Fiona*Becky"_)
+TRUE
+5000
+9 - 
+while w; if i; stmt s1, s2; call c; assign a; variable v;
+Select <a, v> such that Affects(_, _) pattern a(v,"6*Becky")
+24 Fiona
+5000
+10 -
+while w;
+Select BOOLEAN such that Affects(5, 10) pattern w("Anya",_)
+FALSE
+5000
+11 -
+while w; if i; stmt s1, s2;
+Select <s1, w> such that Affects(s1, 26) pattern w(_,_)
+21 5, 23 5, 25 5, 21 9, 23 9, 25 9, 21 17, 23 17, 25 17
+5000
+12 -
+while w; if i; stmt s1, s2; variable v;
+Select <s1, s2> such that Affects(_, 4) pattern w(v,_)
+
+5000
+13 -
+while w; if i; stmt s1, s2; assign a;
+Select <a, w> such that Affects(1, a) pattern w("Becky",_)
+2 5, 8 5, 11 5, 12 5
+5000
+14 -
+while w; if i; stmt s1, s2;
+Select w such that Affects(s1, s2)  pattern w(_,_)
+5, 9, 17
+5000
+15 -
+while w; if i; stmt s1, s2; variable v; assign a;
+Select <v> such that Affects(_, a) pattern w(v,_)
+Becky,Fiona,Loid
+5000
+16 -
+while w; if i; stmt s1, s2;
+Select i such that Affects(18, _) pattern w("i",_)
+
+5000
+17 -
+while w; if i; stmt s1, s2;
+Select <s1, w> such that Affects(s1, _) pattern w(_,_)
+1 5, 2 5, 3 5, 4 5, 6 5, 8 5, 10 5, 14 5, 21 5, 22 5, 23 5, 24 5, 25 5, 26 5, 27 5, 1 9, 2 9, 3 9, 4 9, 6 9, 8 9, 10 9, 14 9, 21 9, 22 9, 23 9, 24 9, 25 9, 26 9, 27 9, 1 17, 2 17, 3 17, 4 17, 6 17, 8 17, 10 17, 14 17, 21 17, 22 17, 23 17, 24 17, 25 17, 26 17, 27 17
+5000
+18 -
+while w; if i; stmt s1, s2; call c; variable v;
+Select <c, v> such that Affects(_, _) pattern w(v,_)
+13 Becky,13 Fiona,13 Loid,15 Becky,15 Fiona,15 Loid,19 Becky,19 Fiona,19 Loid
+5000
+19 -
+while w; if i; stmt s;
+Select BOOLEAN such that Affects(1, 10) pattern i("Fiona",_,_)
+FALSE
+5000
+20 -
+while w; if i; stmt s1, s2;
+Select <s1> such that Affects(s1, 18) pattern i(_,_,_)
+22 , 24
+5000
+21 -
+while w; if i; stmt s1, s2; variable v;
+Select <s1, s2> such that Affects(_, 31) pattern i(v,_,_)
+
+5000
+22 -
+while w; if i; stmt s1, s2; assign a;
+Select <i, a> such that Affects(6, a) pattern i("Anya",_,_)
+16 12, 20 12
+5000
+23 -
+while w; if i; stmt s1, s2;
+Select s1 such that Affects(s1, s2) pattern i(_,_,_)
+1, 2, 3, 4, 6, 8, 10, 14, 21, 22, 23, 24, 25, 26, 27
+5000
+24 -
+while w; if i; stmt s1, s2; variable v;
+Select <i, v> such that Affects(_, s1) pattern i(v,_,_)
+16 Anya,20 Anya,30 Fiona,7 Loid
+5000
+25 -
+while w; if i; stmt s1, s2;
+Select i such that Affects(9, _) pattern i("a",_,_)
+
+5000
+26 -
+while w; if i; stmt s1, s2;
+Select <i> such that Affects(s1, _) pattern i(_,_,_)
+7, 16, 20, 30
+5000
+27 -
+while w; if i; stmt s1, s2; call c; variable v;
+Select v such that Affects(_, _) pattern i(v,_,_)
+Anya,Fiona,Loid
+5000

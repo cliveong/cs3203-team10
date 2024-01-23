@@ -1,0 +1,42 @@
+procedure procedure {
+  call print;
+while (while == print) {
+if ( a >= zzz)  then {call b;}else{
+
+
+print a;
+print b;
+print c;
+print d;
+read read;
+}
+}
+}
+
+
+procedure print {
+
+read b;
+
+call b;
+}
+
+procedure b  {
+read ccc;
+a = b*b;
+print w;
+read print;
+}
+procedure ab {if(z==2)then{read a;}else{call abc;}while(z==abd){print b;}}
+procedure     abc{
+call abcd;
+	print abcd;
+}
+
+procedure abcd 
+{
+	while ((3*z)==(((((2*e)))))){read procedure;}
+}
+
+
+

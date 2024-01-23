@@ -1,0 +1,55 @@
+1 - 2 relationships
+procedure p; stmt s1, s2;
+Select s1 such that Calls(p, "dumbo") and Follows(s1, s2)
+1,12,13,16,17,18,19,2,20,21,23,26,3,30,33,34,35,4,5,6,7,9
+5000
+2 - 3 relationships
+procedure p; stmt s1, s2;
+Select s1 such that Calls(p, "dumbo") and Follows(s1, s2) and Modifies(s2,_)
+1,12,13,16,17,18,19,2,20,21,23,26,3,30,33,34,4,5,6,7,9
+5000
+3 - 3 rs
+procedure p; stmt s1, s2; if i;
+Select s1 such that Calls(p, "dumbo") and Follows(s1, s2) and Modifies(s2,_)
+1,12,13,16,17,18,19,2,20,21,23,26,3,30,33,34,4,5,6,7,9
+5000
+4 - 3 rs
+procedure p; stmt s1, s2, s3; if i;
+Select s1 such that Calls(p, "dumbo") and Follows(s1, s2) and Modifies(s2,_)
+1,12,13,16,17,18,19,2,20,21,23,26,3,30,33,34,4,5,6,7,9
+5000
+5 - 2 patterns
+assign a1, a2, a3; if i; while w;
+Select a1 pattern a1("goofy",_) and i("donald",_,_)
+12,14,2
+5000
+6 - 3 patterns
+assign a1, a2, a3; if i; while w;
+Select a1 pattern a1("goofy",_) and i("donald",_,_) and a2(_,_"goofy"_)
+12,14,2
+5000
+7 - 4 patterns
+assign a1, a2, a3; if i; while w;
+Select a1 pattern a1("goofy",_) and i("donald",_,_) and a2(_,_"goofy"_) and w(_,_)
+12,14,2
+5000
+8 - 5 patterns
+assign a1, a2, a3; if i; while w; variable v;
+Select a1 pattern a1("goofy",_) and i("donald",_,_) and a2(_,_"goofy"_) and w(_,_) and a3(v,_"donald"_)
+12,14,2
+5000
+9 - 2 with
+assign a; constant c; variable v; call cl; stmt s; read r;
+Select c with a.stmt# = c.value and c.value = s.stmt#
+1,10,2,3,4,6
+5000
+10 - 3 with
+assign a; constant c; variable v; call cl; stmt s; read r;
+Select c with a.stmt# = c.value and c.value = s.stmt# and cl.procName = v.varName
+1,10,2,3,4,6
+5000
+11 - 4 with
+assign a; constant c; variable v; call cl; stmt s; read r; procedure pro;
+Select a with a.stmt# = c.value and c.value = s.stmt# and cl.procName = v.varName and r.varName = v.varName
+1,10,2,3,4,6
+5000

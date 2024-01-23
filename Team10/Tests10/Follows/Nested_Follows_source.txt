@@ -1,0 +1,163 @@
+procedure SoC {
+   call InejGhafa;
+   call KazBrekker;
+   call JesperFahey;
+   call NinaZenik;
+   call WylanVanEk;
+   call byematthiasoops;
+}
+procedure InejGhafa {
+    acrobatics = 8;
+    while (acrobatics > 0) {
+        if (acrobatics > 10000) then {
+            stealth = stealth + 2;
+            acrobatics = acrobatics + 1;
+        } else {
+            agility = agility * 3;
+            acrobatics = acrobatics - 1;
+            call KazBrekker;
+        }
+    }
+    daggerSkills = stealth - acrobatics;
+}
+
+procedure KazBrekker {
+    cunning = 1000;
+    while (cunning > 5) {
+        if (cunning > 8) then {
+            heistPlanning = 1;
+        } else {
+            doubleCross = 1;
+            while (doubleCross < 2) {
+                if (doubleCross > 1) then {
+                    deception = 5;
+                    while (deception > 0) {
+                        print deception;
+                        deception = deception - 1;
+                    }
+                } else {
+                    print doubleCross;
+                    doubleCross = doubleCross + 1;
+                }
+                cunning = cunning - 1;
+            }
+        }
+        while (infiltration < 5) {
+            print infiltration;
+            infiltration = infiltration + 1;
+        }
+        while (heistPlanning < 7) {
+            if (heistPlanning < 1) then {
+                infiltration = 0;
+                cunning = cunning - 2;
+            } else {
+                print heistPlanning;
+                heistPlanning = heistPlanning + 1;
+            }
+        }
+    }
+    masterPlan = cunning * 2;
+}
+
+procedure JesperFahey {
+    sharpshooting = 1 - luck;
+    while ((gambling < 1) && (cards != favour)) {
+        pokerFace = cheating + cheating - 3;
+        read shootingSkill;
+        while (shootingSkill <= fate) {
+            shootingSkill = shootingSkill + 1;
+            call InejGhafa;
+        }
+        shootingSkill = sharpshooting * cheating + gambling;
+        if (shootingSkill < fateOutcome) then {
+            shootingSkill = fateOutcome;
+        } else {
+            shootingSkill = destiny;
+        }
+        print fate;
+        shootingSkill = 1 + fate - destinyScore;
+        luck = 2;
+
+        if (shootingSkill > 1) then {
+            marksmanship = sharpshooting * 3 - 2;
+            if (luck < 10) then {
+                shootout = shootout + diceRoll;
+                while (shootout > 1) {
+                    print gunFIGHT;
+                    shootout = shootout - 1;
+                }
+                print shootout;
+                while (cards < gambling) {
+                    reload = (stealth + 3) - 3;
+                    if (gambling == 1) then {
+                        print gambling;
+                    } else {
+                        print marksmanship;
+                        gambling = 1;
+                    }
+                    marksmanship = gambling - reload + 3;
+                }
+            } else {
+                print SomethinsAfoot;
+            }
+            read bluffing;
+            while ((bluffing - 10 * 9 % 11) < 11) {
+                bluffCheck = pokerFace + 1 + gambling;
+                while (!(gambling == 3)) {
+                    if (10 * luck != fate) then {
+                        fateCard = fate + 3;
+                    } else {
+                        destiny = sharpshooting + cheating + gambling + luck - 9;
+                        read fateOutcome;
+                        call InejGhafa;
+                        destinyScore = fateScore * 18;
+                    }
+                    read target;
+                    print outcome;
+                    if (outcome < target) then {
+                        while (outcome < target) {
+                            read outcome;
+                        }
+                    } else {
+                        read target;
+                    }
+                }
+                read diceRoll;
+                luck = fate - diceRoll;
+            }
+        } else {
+            read cards;
+            print cards;
+            while (shootingSkill == 3) {
+                print bluffCheck;
+            }
+        }
+        while (fate >= 102) {
+            destinyCard = luck + 10;
+            fate = fate + sharpshooting + fate * fate * sharpshooting;
+            if (fateOutcome > cards) then {
+                print fateOutcome;
+                fateScore = 1234567;
+            } else {
+                print destinyScore;
+                print marksmanship;
+                read fateRoll;
+                read marksmanship;
+                destinyScore = marksmanship;
+            }
+            print destinyScore;
+        }
+    }
+}
+
+procedure byematthiasoops {
+    read ripfr;
+}
+
+procedure WylanVanEk {
+    read abook;
+}
+
+procedure NinaZenik {
+    read chifantime;
+}

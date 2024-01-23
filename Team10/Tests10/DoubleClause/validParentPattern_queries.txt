@@ -1,0 +1,45 @@
+1 - Overlapping assign synonym, pattern rhs constant integer match
+stmt s; assign a;
+Select s such that Parent(s, a) pattern a("i", _"50"_)
+5
+5000
+2 - Overlapping assign synonym, pattern rhs constant variable match
+stmt s; assign a;
+Select a such that Parent(s, a) pattern a("y", _"x"_)
+7
+5000
+3 - Overlapping assign synonym, direct Parent and pattern rhs wildcard
+stmt s; assign a;
+Select s such that Parent(s, a) pattern a("i", _)
+5
+5000
+4 - Overlapping assign synonym, pattern lhs synonym
+stmt s; assign a; variable v;
+Select s such that Parent*(s, a) pattern a(v, _)
+4, 5
+5000
+5 - Overlapping assign synonym, Parent
+assign a; variable v;
+Select a such that Parent(4, a) pattern a(v, _)
+none
+5000
+6 - No overlapping, Select such that clause
+stmt s; if if; assign a;
+Select s such that Parent(s, if) pattern a(_, _)
+4
+5000
+7 - No overlapping, Select pattern clause
+stmt s; if if; assign a;
+Select a such that Parent(s, if) pattern a("i", _)
+3, 6, 8
+5000
+8 - Boolean clause is true
+stmt s; if if; assign a;
+Select a such that Parent(4, 5) pattern a("i", _)
+3, 6, 8
+5000
+9 - Boolean clause is false
+stmt s; if if; assign a; variable v;
+Select v such that Parent(6, 5) pattern a("i", _)
+none
+5000

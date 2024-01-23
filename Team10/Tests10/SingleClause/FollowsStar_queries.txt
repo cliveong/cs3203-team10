@@ -1,0 +1,150 @@
+1 - Follows*: stmt, read
+stmt s; read r;
+Select s such that Follows*(s, r)
+1,2,3,4,5,31
+5000
+2 - Follows*: stmt, assign
+stmt s; assign a;
+Select s such that Follows*(s, a)
+1, 7,8,9,11,12,15,18,19,21,22,25
+5000
+3 - Follows*: stmt, print
+stmt s; print p;
+Select s such that Follows*(s, p)
+4,5,7,8,9,18,19,29
+5000
+4 - Follows*: stmt, while
+stmt s; while w;
+Select s such that Follows*(s, w)
+1,2,3,7,8,9,11,12,18,31,33
+5000
+5 - Follows*: stmt, if
+stmt s; if ifs;
+Select s such that Follows*(s, ifs)
+1,2,3,4,7,8,9,11,18,19,21,22,31,33,34
+5000
+6 - Follows*: stmt, stmt num with result
+stmt s;
+Select s such that Follows*(s, 15)
+11,12
+5000
+7 - Follows*: stmt, stmt no result
+stmt s;
+Select s such that Follows*(s, 10)
+
+5000
+8 - Follows*: stmt, stmt same stmt no result
+stmt ss;
+Select s such that Follows*(ss, ss)
+SemanticError
+5000
+9 - Follows*: if, if
+if i; if i1;
+Select i such that Follows*(i, i1)
+9,22
+5000
+10 - Follows*: if, read
+if ifs; read r;
+Select ifs such that Follows*(ifs, r)
+5
+5000
+11 - Follows*: if, print
+if ifs; print p;
+Select ifs such that Follows*(ifs, p)
+5,9
+5000
+12 - Follows*: if, assign
+if ifs; assign a;
+Select ifs such that Follows*(ifs, a)
+9,12,22,25
+5000
+13 - Follows*: if, while
+if ifs; while w;
+Select ifs such that Follows*(ifs, w)
+9,12
+5000
+14 - Follows*: if, stmt num with result
+if ifs;
+Select ifs such that Follows*(ifs, 18)
+9
+5000
+15 - Follows*: if, stmt number no result
+if ifs;
+Select ifs such that Follows*(ifs, 1)
+
+5000
+16 - Follows*: while, while
+while w; while w1;
+Select w such that Follows*(w, w1)
+3,31
+5000
+17 - Follows*: while, read
+while w; read r;
+Select w such that Follows*(w, r)
+3,31
+5000
+18 - Follows*: while, print
+while w; print p;
+Select w such that Follows*(w, p)
+19
+5000
+19 - Follows*: while, assign
+while w; assign a;
+Select w such that Follows*(w, a)
+15,19
+5000
+20 - Follows*: while, if
+while w; if ifs;
+Select w such that Follows*(w, ifs)
+3,19,31,34
+5000
+21 - Follows*: while, stmt num true
+while w;
+Select w such that Follows*(w, 21)
+19
+5000
+22 - Follows*: while, stmt number no result
+while w;
+Select w such that Follows*(w, 1)
+
+5000
+23 - Follows*: stmt number, stmt
+stmt s;
+Select s such that Follows*(5, s)
+29,30
+5000
+24 - Follows*: stmt number, read
+read r;
+Select r such that Follows*(5, r)
+29
+5000
+25 - Follows*: stmt number, print
+print p;
+Select p such that Follows*(29, p)
+30
+5000
+26 - Follows*: stmt number, assign
+assign a;
+Select a such that Follows*(1, a)
+2
+5000
+27 - Follows*: stmt number, if
+if ifs;
+Select ifs such that Follows*(4, ifs)
+5
+5000
+28 - Follows*: stmt number, while
+while w;
+Select w such that Follows*(2, w)
+3,31,34
+5000
+29 - Follows*: stmt number, stmt number true
+constant c;
+Select c such that Follows*(1, 2)
+0,1,7,8,300,998
+5000
+30 - Follows*: stmt number, stmt number false no result
+constant c;
+Select c such that Follows*(1, 5)
+
+5000

@@ -1,0 +1,390 @@
+1 - Wildcard Wildcard Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(_,_)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+2 - Wildcard String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("a",_)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+3 - Wildcard Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,_)
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+4 - String Wildcard Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("d",_)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+5 - String String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("f","j")
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+6 - String Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("i",p)
+t,u,v,w,x,y,z,s,j
+5000
+7 - Synonym Wildcard Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,_)
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+8 - Synonym String Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select Calls such that Calls*(Calls,"o")
+a,c,f,g,l,m,n,p
+5000
+9 - Synonym Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,p1)
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+10 - Same Synonym Calls*
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,p)
+
+5000
+11 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("a",p)
+b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+12 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("b",p)
+d,h,i,t,u,v,w,x,y,z,s,e,j,k
+5000
+13 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("c",p)
+f,l,n,p,o,q,r,s,z,g,m,j
+5000
+14 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("d",p)
+h,i,t,u,v,w,x,y,z,s,j
+5000
+15 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("e",p)
+j,k,s
+5000
+16 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("f",p)
+l,n,p,o,q,r,s,z,j
+5000
+17 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("g",p)
+m,o,q,r,s,z,j
+5000
+18 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("h",p)
+
+5000
+19 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("i",p)
+t,u,v,w,x,y,z,s,j
+5000
+20 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("j",p)
+
+5000
+21 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("k",p)
+s,j
+5000
+22 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("l",p)
+n,p,o,q,r,s,z,j
+5000
+23 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("m",p)
+o,q,r,s,z,j
+5000
+24 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("n",p)
+p,o,q,r,s,z,j
+5000
+25 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("o",p)
+q,r,s,z,j
+5000
+26 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("p",p)
+o,q,r,s,z,j
+5000
+27 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("q",p)
+r,s,z,j
+5000
+28 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("r",p)
+s,z,j
+5000
+29 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("s",p)
+j
+5000
+30 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("t",p)
+u,v,w,x,y,z,s,j
+5000
+31 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("u",p)
+v,w,x,y,z,s,j
+5000
+32 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("v",p)
+w,x,y,z,s,j
+5000
+33 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("w",p)
+x,y,z,s,j
+5000
+34 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("x",p)
+y,z,s,j
+5000
+35 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("y",p)
+z,s,j
+5000
+36 - Calls* for individual procedures check
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("z",p)
+
+5000
+37 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*("a",_) with p.procName =    "t"
+t
+5000
+38 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,_) with p.procName = p.procName
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+39 - Calls* With test
+procedure p, p1, p2, p3, Calls, CallsT; call c;
+Select p such that Calls*(p,_) with p.procName = c.procName
+b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+40 - Calls* attr select test
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p.procName such that Calls*("a",_) 
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+41 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"a")
+
+5000
+42 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, call, CallsT;
+Select call such that Calls*(call,"b")
+a
+5000
+43 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"c")
+a
+5000
+44 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"d")
+a,b
+5000
+45 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"e")
+a,b
+5000
+46 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"f")
+a,c
+5000
+47 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"g")
+a,c
+5000
+48 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"h")
+a,b,d
+5000
+49 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"i")
+a,b,d
+5000
+50 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"j")
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
+5000
+51 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"k")
+a,b,e
+5000
+52 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"l")
+a,c,f
+5000
+53 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"m")
+a,c,g
+5000
+54 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"n")
+a,c,f,l
+5000
+55 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"o")
+a,c,f,g,l,m,n,p
+5000
+56 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"p")
+a,c,f,l,n
+5000
+57 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"q")
+a,c,f,g,l,m,n,o,p
+5000
+58 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"r")
+a,c,f,g,l,m,n,o,p,q
+5000
+59 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"s")
+a,b,c,d,e,f,g,i,k,l,m,n,o,p,q,r,t,u,v,w,x,y
+5000
+60 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"t")
+a,b,d,i
+5000
+61 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"u")
+a,b,d,i,t
+5000
+62 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"v")
+a,b,d,i,t,u
+5000
+63 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"w")
+a,b,d,i,t,u,v
+5000
+64 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"x")
+a,b,d,i,t,u,v,w
+5000
+65 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"y")
+a,b,d,i,t,u,v,w,x
+5000
+66 - Calls* for individual procedures check reverse
+procedure p, p1, p2, p3, Calls, CallsT;
+Select p such that Calls*(p,"z")
+a,b,c,d,f,g,i,l,m,n,o,p,q,r,t,u,v,w,x,y
+5000
+67 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select BOOLEAN such that Calls*("a",_)
+TRUE
+5000
+68 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, BOOLEAN;
+Select BOOLEAN such that Calls*("a",_)
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+5000
+69 - Calls*  BOOLEAN 
+procedure p, p1, p2, p3, Calls, CallsT;
+Select BOOLEAN such that Calls*("h","z")
+FALSE
+5000
+70 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, BOOLEAN;
+Select BOOLEAN such that Calls*("c","h")
+
+5000
+71 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN such that 
+Calls*(" c	","	h 	")
+
+5000
+72 - Calls* BOOLEAN 
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN such
+ that Calls*(" c	","	h 	")
+
+5000
+73 - Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN 
+such that Calls*(" c	","	hh 	")
+
+5000
+74 - Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select 
+BOOLEAN such that Calls*(" c	","	c 	")
+
+5000
+75 - Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN such that Calls*(p
+,p)
+
+5000
+76 - Meaningless Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;Select BOOLEAN such that Calls*(" c	
+",p) with p.procName 		= " c                         "
+
+5000
+77 - Multiple calls * Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;
+Select <p, p1> such that Calls*(p,p1) and Calls*(p1,p2) and Calls*(p2,p3) with p3.procName = "o"
+a c,a f,c f,a g,c g,a l,c l,f l,a n,c n,f n,l n
+5000
+78 - Multiple calls * Queries
+procedure p, p1, p2, p3, Calls, BOOLEAN;
+Select <p, p1, p2> such that Calls*(p,p1) and Calls*(p1,p2) and Calls*(p2,p3) with p3.procName = "o"
+a c f,a c g,a c l,a c m,a c n,a c p,a f l,a f n,a f p,c f l,c f n,c f p,a g m,c g m, a l n, a l p,c l n, c l p,f l n,f l p,a n p, c n p,f n p,l n p
+5000

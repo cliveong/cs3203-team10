@@ -1,0 +1,25 @@
+procedure with {read a;
+    print b;
+    c = a + b / 3 % 4 - 2;
+    while (d <= (5 + b)) {
+        call with2;
+        var = 30;
+        var = e / f - 1;
+    }if (cannot == 0) then {
+        read r1;
+        print r2;
+        v = 20;
+    } else {v1 = v2 + v1;}
+}procedure with2 {if (a > b) then {
+        call with3;
+        read y;
+    } else {print r1;
+       call with4;
+       a = b + c * d; }
+}procedure with3 {while (0 == 13) {
+        call with4;
+        read with2;
+        print d;
+        d = v;}
+}procedure with4 {w4 = w3 / w2 * w1;
+}

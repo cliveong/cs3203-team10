@@ -1,0 +1,100 @@
+1 -  If pattern: variable synonym
+if i; variable v;
+Select v pattern i(v, _, _)
+a, b, c, f, x, y, z
+5000
+2 -  If pattern: 3 _
+if i;
+Select i pattern i(_, _, _)
+5, 10, 15, 16,21,23
+5000
+3 -  If pattern: variable name nested
+if i;
+Select i pattern i("z", _, _)
+10, 16, 21, 23
+5000
+4 -  If pattern: variable name
+if i;
+Select i pattern i("y", _, _)
+5,15,16
+5000
+5 -  If pattern: variable synonym (2nd arg, invalid)
+if i; variable v;
+Select i pattern i(_, v, _)
+SyntaxError
+5000
+6 -  If pattern: variable synonym (3rd arg, invalid)
+if i; variable v;
+Select i pattern i(_, _, v)
+SyntaxError
+5000
+7 -  If pattern: variable name (2nd arg, invalid)
+if i;
+Select i pattern i(_, "x", _)
+SyntaxError
+5000
+8 -  If pattern: variable name (3rd arg, invalid)
+if i;
+Select i pattern i(_, _, "x")
+SyntaxError
+5000
+9 -  If pattern: variable name (2 args)
+if i;
+Select i pattern i(_, _)
+SemanticError
+5000
+10 -  If pattern: variable name (4 args)
+if i;
+Select i pattern i(_, _, _, _)
+SyntaxError
+5000
+11 - If pattern: variable name (1 arg)
+if i;
+Select i pattern i(_)
+SyntaxError
+5000
+12 - If pattern: call, wildcard
+stmt s; if i;
+Select i pattern i(s, _, _)
+SemanticError
+5000
+13 - if pattern explicit and
+if w, ww;
+Select w pattern w("b",_,_) and ww("z", _,_)
+16, 21
+5000
+14 - if pattern implicit and
+if w, ww;
+Select w pattern w("b",_,_) pattern w("z", _, _)
+16, 21
+5000
+15 - if pattern not
+if w, ww;
+Select w pattern not w("z",_, _) pattern not w("b", _,_)
+5,15,27
+5000
+16 - if pattern explicit and not
+if w; variable v;
+Select <w, v> pattern not w("c",_, _) and w(v, _,_)
+10 f, 10 z, 15 y, 16 b, 16 y, 16 z, 23 z
+5000
+17 - if pattern implicit and not
+if w, ww;
+Select w pattern not w(_,_,_) pattern ww("z", _,_)
+27
+5000
+18 - If pattern: complex conjunction
+if ifs;
+Select ifs pattern ifs("w", _,_) and not ifs(_,_,_) and ifs(_,_,_)
+
+5000
+19 - if pattern: no variables
+if ifs; variable v;
+Select ifs pattern ifs(v,_,_)
+5, 10,15,16,21,23
+5000
+20 - If pattern: not empty result
+if ifs;
+Select ifs pattern not ifs("session", _, _)
+5,10,16,15,21,23,27
+5000

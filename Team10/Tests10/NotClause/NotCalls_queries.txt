@@ -1,0 +1,110 @@
+1 - BOOLEAN not calls, no declaration, wildcard-wildcard
+
+Select BOOLEAN such that not Calls(_, _)
+FALSE
+5000
+2 - proc that does not call proc, syn-wildcard
+procedure p;
+Select p such that not Calls(p, _)
+proc3, proc6
+5000
+3 - proc that does not get called, wildcard-syn
+procedure p;
+Select p such that not Calls(_, p)
+proc2, proc7
+5000
+4 - reverse of all possible proc that call/get called
+procedure p, q;
+Select <p,q    > such that not Calls(p, q)
+proc1 proc1, proc1 proc2, proc1 proc4, proc1 proc6, proc1 proc7, proc2 proc1, proc2 proc2, proc2 proc5, proc2 proc6, proc2 proc7, proc3 proc1, proc3 proc2, proc3 proc3, proc3 proc4, proc3 proc5, proc3 proc6, proc3 proc7, proc4 proc1, proc4 proc2, proc4 proc3, proc4 proc4, proc4 proc7, proc5 proc1, proc5 proc2, proc5 proc3, proc5 proc4, proc5 proc5, proc5 proc7, proc6 proc1, proc6 proc2, proc6 proc3, proc6 proc4, proc6 proc5, proc6 proc6, proc6 proc7, proc7 proc2, proc7 proc3, proc7 proc4, proc7 proc5, proc7 proc7
+5000
+5 -  proc that does not called by specific proc
+procedure p;
+Select p such that not Calls      ("proc3", p)
+proc1, proc2, proc3, proc4, proc5, proc6, proc7
+5000
+6 -  proc that does not call specific proc
+procedure p;
+Select      p.procName such that not Calls(p, "proc6")
+proc1, proc2, proc3, proc6
+5000
+7 - proc uses var with same name as other proc, but does not call it
+
+Select BOOLEAN such that not       Calls("proc3   ", _  )
+TRUE
+5000
+8 - negation of empty results
+procedure BOOLEAN;
+Select BOOLEAN       such that not Calls(   "proc1","proc4"  )
+proc1, proc2, proc3, proc4, proc5, proc6, proc7
+5000
+9 - multi-clause calls, explicit and
+procedure Follows;
+Select     Follows such that not Calls(Follows, "proc3") and not Calls(Follows, "proc4")
+proc3, proc4, proc5, proc6, proc7
+5000
+10 - multi-clause calls, implicit and
+procedure p;
+Select p such that not Calls(p, _) such that Calls(_, p)
+proc3, proc6
+5000
+11 - multi-clause calls, Uses
+procedure p;
+Select p such that not  Calls(p, "proc3") and Uses(p, "      proc1")
+proc7
+5000
+12 - multi-clause calls, Modifies
+procedure p;
+Select p such      that not Calls(p, "proc5") and Modifies(p, "proc5")
+proc2, proc3, proc5, proc6, proc7
+5000
+13 - multi-clause calls, Uses, with-clause
+procedure p, q; variable v;
+Select <p, v.varName> such that not Calls(q, "     proc4") and Uses(p, v) with q    .procName = v.    varName
+proc7 proc1
+5000
+14 - multi-clause calls, Uses
+procedure p; variable v;
+Select v such that not Calls(_, p) such that Uses(p, v)
+a, b, j, proc1, k, kk, i
+5000
+15 - multi-clause calls, Uses, Parent*, with-clause
+procedure p, q; if if; call c; variable v;
+Select p such that not Calls(q, p) and Parent*(if, c) and Uses(if, v) with q.procName = v.varName
+proc1, proc2, proc4, proc6, proc7
+5000
+16 - synonym name not
+procedure not;
+Select not such that not Calls(not, _)
+proc3, proc6
+5000
+17 - not before such
+procedure p, q;
+Select p not such that Calls(p, q)
+SyntaxError
+5000
+18 - not after such, before that
+procedure p, q;
+Select p such not that Calls(p, q)
+SyntaxError
+5000
+19 - not after Calls position
+procedure p, q;
+Select p such that Calls not (p, q)
+SyntaxError
+5000
+20 - wrong and such that
+procedure p, q;
+Select p such that Calls (p, _) and such that not Calls(_, q)
+SyntaxError
+5000
+21 - explicit and missing
+procedure p, q;
+Select p such that not Calls (p, _) not Calls(_, q)
+SyntaxError
+5000
+22 - implicit and, wrong not position
+procedure p, q;
+Select p such that not Calls (p, _) not such that Calls(_, q)
+SyntaxError
+5000
